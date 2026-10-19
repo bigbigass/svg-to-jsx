@@ -1,0 +1,640 @@
+{
+  "meta": {
+    "ogLocale": "zh_CN",
+    "tagline": "SVG 转 JSX、React、Vue 和 Solid 组件"
+  },
+  "nav": {
+    "skip": "跳到正文",
+    "main": "主导航",
+    "react": "React",
+    "tsx": "TSX",
+    "reactNative": "React Native",
+    "vue": "Vue",
+    "solid": "Solid",
+    "guide": "指南",
+    "language": "语言"
+  },
+  "footer": {
+    "about": "关于",
+    "privacy": "隐私政策",
+    "sisterSites": "姊妹网站",
+    "contrast": "ContrastCheck — WCAG 颜色对比度检测",
+    "aspect": "宽高比计算器",
+    "note": "免费、纯浏览器端的 SVG 转组件工具。你的文件永远不会离开你的设备。",
+    "breadcrumb": "面包屑导航"
+  },
+  "common": {
+    "faqTitle": "常见问题",
+    "relatedTitle": "相关转换工具与指南"
+  },
+  "tool": {
+    "regionLabel": "SVG 转换器",
+    "presetsLabel": "快速预设",
+    "presets": {
+      "react": "React",
+      "reactTs": "React + TS",
+      "icon": "图标（currentColor + size）",
+      "reactNative": "React Native",
+      "vue": "Vue SFC",
+      "solid": "Solid"
+    },
+    "inputLabel": "SVG 输入",
+    "inputPlaceholder": "在此粘贴 <svg>…</svg> 代码",
+    "dropHint": "将 .svg 文件拖放到这里，或",
+    "chooseFiles": "选择文件",
+    "fileNote": "文件通过 FileReader 在本地读取，绝不会上传。",
+    "loadSample": "载入示例",
+    "clear": "清空",
+    "outputLabel": "输出",
+    "emptyOutput": "粘贴 SVG 或拖入文件，即可看到生成的组件。",
+    "copy": "复制代码",
+    "copied": "已复制！",
+    "download": "下载 {file}",
+    "targetLabel": "输出格式",
+    "targets": {
+      "react": "React 组件",
+      "react-native": "React Native（react-native-svg）",
+      "vue": "Vue 单文件组件",
+      "solid": "Solid 组件",
+      "jsx": "纯 JSX 片段"
+    },
+    "optionsLabel": "选项",
+    "options": {
+      "componentName": "组件名称",
+      "typescript": "TypeScript",
+      "currentColor": "将颜色替换为 currentColor",
+      "sizeProp": "添加 size 属性",
+      "spreadProps": "展开 {...props}",
+      "forwardRef": "使用 forwardRef 包裹",
+      "memo": "使用 memo 包裹",
+      "removeDimensions": "移除 width/height（保留 viewBox）",
+      "stripXmlns": "移除 xmlns",
+      "stripComments": "移除注释",
+      "stripMetadata": "移除元数据和编辑器信息",
+      "stripIds": "移除未使用的 id",
+      "collapseWhitespace": "压缩空白字符",
+      "precision": "数字取整",
+      "precisionOff": "关闭",
+      "decimals": "保留 {n} 位小数",
+      "exportStyle": "导出方式",
+      "exportDefault": "默认导出",
+      "exportNamed": "具名导出"
+    },
+    "previewLabel": "预览",
+    "previewAlt": "转换后 SVG 的预览",
+    "sizeOriginal": "原始 SVG",
+    "sizeOptimized": "优化后 SVG",
+    "sizeOutput": "组件",
+    "errorTitle": "无法转换此 SVG",
+    "errorLine": "第 {line} 行",
+    "errors": {
+      "empty": "输入为空。请粘贴 SVG 代码或拖入 .svg 文件。",
+      "noSvgRoot": "根元素必须是 <svg>。",
+      "unclosedTag": "有标签没有闭合：<{detail}>。",
+      "mismatchedTag": "闭合标签与开始标签不匹配（{detail}）。",
+      "unexpectedClosingTag": "出现多余的闭合标签 </{detail}>。",
+      "invalidAttribute": "“{detail}”附近的属性无效。属性值必须加引号。",
+      "duplicateAttribute": "属性“{detail}”在同一元素上出现了两次。",
+      "unterminated": "代码在找到“{detail}”之前就结束了。",
+      "multipleRoots": "每个文件只能有一个根 <svg> 元素。",
+      "textOutsideRoot": "<svg> 元素外存在文本内容。",
+      "unknown": "转换时发生意外错误。"
+    },
+    "warningsTitle": "提示",
+    "warnings": {
+      "scriptRemoved": "出于安全考虑，已移除 <script> 元素。",
+      "eventHandlerRemoved": "已移除事件处理属性 {detail}。",
+      "rnUnsupportedElement": "react-native-svg 不支持 <{detail}>，已将其删除。",
+      "rnClassRemoved": "React Native 不支持 class 属性，已将其移除。",
+      "vueStyleTag": "Vue 模板会忽略标记中的 <style> 标签，请把这些样式移到 <style> 块中。"
+    },
+    "batchTitle": "批量转换",
+    "batchCount": "已转换 {n} 个文件",
+    "batchFailed": "{n} 个失败",
+    "downloadZip": "下载 ZIP",
+    "batchShow": "查看",
+    "batchError": "错误"
+  },
+  "pages": {
+    "home": {
+      "title": "SVG 转 JSX 在线工具 — React、TSX、Vue、Solid | SvgJsx",
+      "description": "免费的 SVG 转 JSX 工具，在浏览器中把 SVG 转成 React、TypeScript、React Native、Vue 或 Solid 组件，文件不会上传。",
+      "breadcrumb": "首页",
+      "h1": "SVG 转 JSX 与 React 组件转换器",
+      "intro": "粘贴 SVG 代码或拖入 .svg 文件，即可得到可直接提交的 React、TypeScript、React Native、Vue 或 Solid 组件。所有处理都在你的浏览器本地完成。",
+      "sections": [
+        {
+          "h": "这个 SVG 转换器能做什么",
+          "p": [
+            "从 Figma、Illustrator、Sketch 或 Inkscape 导出的 SVG 是合法的 XML，却不是合法的 JSX。React 要求使用驼峰式属性（例如用 strokeWidth 代替 stroke-width）、用 className 代替 class，并且 style 必须是对象而不是 CSS 字符串。设计工具还会附带 XML 声明、注释、元数据块和带命名空间的属性，这些内容既会增大打包体积，也会引发警告。",
+            "SvgJsx 使用一个小巧的 XML 解析器读取 SVG，把每个属性改写成目标框架需要的形式，再输出格式整齐的组件代码。你可以选择 TypeScript 类型、size 属性、currentColor 填充、forwardRef、memo 以及导出方式，然后复制代码或直接下载文件。"
+          ]
+        },
+        {
+          "h": "如何把 SVG 转换成 React 组件",
+          "p": ["整个流程只需几秒钟："],
+          "list": [
+            "把 SVG 代码粘贴到输入框，或将一个或多个 .svg 文件拖放到输入框上。",
+            "选择输出格式：React、React Native、Vue、Solid 或纯 JSX 片段。",
+            "设置组件名称，并按需开启 TypeScript、currentColor、size 属性等选项。",
+            "查看实时预览和体积对比，然后复制代码或下载文件。多个文件会被打包成一个 ZIP。"
+          ]
+        },
+        {
+          "h": "自动完成的转换",
+          "p": [
+            "带连字符的属性会变成驼峰式（stroke-linecap → strokeLinecap），带命名空间的属性会被展平（xlink:href → xlinkHref），内联 style 字符串会变成 JavaScript 对象。data-* 和 aria-* 属性保持不变，因为 React 原样支持它们。script 元素和内联事件处理器会被移除，确保粘贴进来的文件无法把代码偷偷带进你的应用。",
+            "轻量优化会压缩空白字符，还可以把坐标统一保留到指定的小数位数。对大多数图标集来说，这能减少 20%–40% 的代码量，而且不需要引入笨重的 SVGO 依赖。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "这个 SVG 转 JSX 工具免费吗？",
+          "a": "完全免费。SvgJsx 无需注册账号，也没有使用次数限制。它是一个静态网站，不存在需要转嫁给你的服务器成本。"
+        },
+        {
+          "q": "我的 SVG 文件会被上传吗？",
+          "a": "不会。文件通过浏览器的 FileReader API 读取，并在你的设备上用 JavaScript 完成转换，不会发送到任何服务器，因此可以放心处理公司内部的 Logo 和图标。"
+        },
+        {
+          "q": "SVG 和 JSX 有什么区别？",
+          "a": "SVG 是 XML 标记语言，而 JSX 是 JavaScript 的语法扩展。JSX 需要驼峰式属性名、用 className 代替 class、用对象而不是字符串表示 style，并且特殊字符要用花括号包裹，所以原始 SVG 直接放进去往往无法编译。"
+        },
+        {
+          "q": "支持 Figma 和 Illustrator 导出的文件吗？",
+          "a": "支持。编辑器特有的元数据、注释、sodipodi 和 inkscape 属性以及 XML 声明默认都会被移除；被引用的 id 会保留，所以渐变、遮罩和裁剪路径依然正常工作。"
+        },
+        {
+          "q": "可以一次转换很多 SVG 图标吗？",
+          "a": "可以。同时拖入多个 .svg 文件，每个文件都会生成一个以文件名命名的组件。你可以把它们打包成 ZIP 下载，其中还包含一个统一导出所有图标的 index 文件。"
+        }
+      ]
+    },
+    "svgToReact": {
+      "title": "SVG 转 React 组件在线转换（JSX）| SvgJsx",
+      "description": "在线把 SVG 转成 React 组件：驼峰属性、className、style 对象、size 属性与 {...props} 展开，免费且保护隐私。",
+      "breadcrumb": "SVG 转 React",
+      "h1": "把 SVG 转换为 React 组件",
+      "intro": "把任意 SVG 图标或插画转换成函数式 React 组件：属性符合 JSX 规范，支持 props 展开，还可选 size 和颜色属性。",
+      "sections": [
+        {
+          "h": "为什么不能直接把 SVG 粘贴进 React？",
+          "p": [
+            "把原始 SVG 粘贴进 .jsx 文件，通常会得到一大堆警告，比如 “Invalid DOM property stroke-width”、“Invalid DOM property class”；如果文件里有 style 属性或 XML 声明，甚至会直接编译失败。逐个手动改属性名既慢又容易出错，图标一多更是如此。",
+            "这个转换器会自动完成重命名，并把标记包装成可以接收 props 的组件。由于 {...props} 会展开到根 <svg> 上，父组件可以直接传入 className、aria-label、onClick 或自定义 width，而无需再修改图标本身。"
+          ]
+        },
+        {
+          "h": "React 图标的推荐设置",
+          "p": ["如果要做可复用的图标组件，我们建议："],
+          "list": [
+            "开启 currentColor，让图标继承父元素的文字颜色，并自动适配深色模式。",
+            "开启 size 属性，用一个值（例如 size={20}）同时控制宽和高。",
+            "保留 viewBox，移除固定的 width 和 height，让图标可以随 CSS 缩放。",
+            "只有当父组件需要访问底层 <svg> 元素（例如用于提示框或动画）时，才使用 forwardRef。"
+          ]
+        },
+        {
+          "h": "内联组件还是图片文件？",
+          "p": [
+            "内联 SVG 组件可以用 CSS 设置样式、做动画、在悬停时变色，而且不会产生额外的网络请求。对于体积大、内容固定的插画，普通的 <img src=\"/file.svg\"> 可能更划算，因为浏览器可以单独缓存它。图标和界面图形适合做成组件，大型插画更适合用 img 标签。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "支持哪些 React 版本？",
+          "a": "输出的是普通函数组件，适用于 React 16.8 及更高版本，包括 React 18 和 19。forwardRef 和 memo 是可选项，只有开启时才会被导入。"
+        },
+        {
+          "q": "生成的文件里需要 import React 吗？",
+          "a": "不需要。Next.js、Vite 和 Create React App 4+ 使用新的 JSX 转换，不再要求 React 在作用域中。转换器只会导入组件实际用到的内容。"
+        },
+        {
+          "q": "如何从父组件修改图标颜色？",
+          "a": "开启 currentColor 选项。fill 和 stroke 会被替换为 currentColor，图标就会使用父元素的 CSS 颜色，例如 Tailwind 的 text-red-600 类。"
+        },
+        {
+          "q": "可以给图标传 onClick 或 aria-label 吗？",
+          "a": "可以。组件会把 {...props} 展开到根 <svg> 上，你传入的任何 SVG 属性或事件处理器都会被转发，并覆盖默认值。"
+        }
+      ]
+    },
+    "svgToTsx": {
+      "title": "SVG 转 TSX — 生成带类型的 React 组件 | SvgJsx",
+      "description": "把 SVG 转成 TSX：带 SVGProps<SVGSVGElement> 类型、size 属性、forwardRef 和 memo 的 React 组件。在浏览器中运行，无需上传。",
+      "breadcrumb": "SVG 转 TSX",
+      "h1": "SVG 转 TSX：带类型的 React 图标组件",
+      "intro": "从 SVG 生成 TypeScript React 组件，并附带正确的 props 类型，让每个图标都能接收 className、aria 属性和事件处理器，并享受完整的自动补全。",
+      "sections": [
+        {
+          "h": "生成的类型如何工作",
+          "p": [
+            "组件的 props 类型是 SVGProps<SVGSVGElement>，与 React 为 <svg> 元素定义的类型相同。这样你可以获得所有 SVG 属性和事件处理器的自动补全，传入无效属性时 TypeScript 会在编译阶段报错。",
+            "开启 size 选项后，props 类型变为 SVGProps<SVGSVGElement> & { size?: number | string }，width 和 height 由 size 决定。开启 forwardRef 后，ref 的类型为 Ref<SVGSVGElement>，父组件可以把 ref 交给测量工具或动画库使用。"
+          ]
+        },
+        {
+          "h": "TSX 输出检查清单",
+          "p": ["提交生成的图标之前，请确认："],
+          "list": [
+            "组件名为 PascalCase，并与文件名一致（ArrowLeft.tsx）。",
+            "SVGProps 和 Ref 只通过类型导入引入，在 JavaScript 包中会被完全移除。",
+            "保留了 viewBox；没有它，图标就无法缩放。",
+            "如果代码规范禁止默认导出，请改用具名导出。"
+          ]
+        },
+        {
+          "h": "兼容严格模式",
+          "p": [
+            "生成的代码可以在 \"strict\": true 和 isolatedModules 下编译通过，满足 Next.js、Vite 和 esbuild 的要求。不会生成任何 any 类型，size 的默认值直接写在解构参数中。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "应该用 SVGProps 还是 ComponentProps<\"svg\">？",
+          "a": "两者描述的属性相同。SVGProps<SVGSVGElement> 明确写出了元素类型，也是 React 类型定义中 <svg> 使用的类型，所以转换器采用它。"
+        },
+        {
+          "q": "React 19 中还需要 forwardRef 吗？",
+          "a": "React 19 允许函数组件把 ref 当作普通 prop 接收，因此 forwardRef 不再是必需的。但如果库还要兼容 React 18，它依然有用，所以它是一个默认关闭的可选项。"
+        },
+        {
+          "q": "为什么 size 属性的类型是 number | string？",
+          "a": "数字会被当作像素值；字符串则允许传入 \"1em\" 或 \"1.5rem\" 等 CSS 单位，让图标随周围文字一起缩放。"
+        },
+        {
+          "q": "可以把整个图标文件夹转换成 TSX 吗？",
+          "a": "可以。一次性拖入所有文件，每个 SVG 都会生成一个同名的 .tsx 文件，并与 index.ts 统一导出文件一起打包成 ZIP。"
+        }
+      ]
+    },
+    "svgToReactNative": {
+      "title": "SVG 转 React Native 组件（react-native-svg）| SvgJsx",
+      "description": "把 SVG 转换为 react-native-svg 组件：path、g、circle 自动映射为 Path、G、Circle，并带 SvgProps 类型，完全免费。",
+      "breadcrumb": "SVG 转 React Native",
+      "h1": "把 SVG 转换为 React Native（react-native-svg）",
+      "intro": "React Native 无法直接渲染 <svg> 标签。这个转换器会把 SVG 改写为 Svg、Path、G、Circle 等 react-native-svg 组件，并自动生成正确的导入语句。",
+      "sections": [
+        {
+          "h": "React Native 输出有什么不同",
+          "p": [
+            "react-native-svg 为每个 SVG 元素提供了首字母大写的组件：<path> 变成 <Path>，<g> 变成 <G>，<linearGradient> 变成 <LinearGradient>。转换器会映射所有受支持的元素，只导入实际用到的组件，并把 props 类型设为 SvgProps。",
+            "没有原生对应组件的元素，例如 <title>、<desc>、<style> 或 <metadata>，会被删除并给出提示，避免组件在运行时崩溃。class 属性同样会被移除，因为 React Native 没有 CSS 类。"
+          ]
+        },
+        {
+          "h": "安装 react-native-svg",
+          "p": ["使用生成的组件："],
+          "list": [
+            "安装依赖：Expo 项目运行 npx expo install react-native-svg，原生 React Native 项目运行 npm install react-native-svg。",
+            "把转换后的代码保存为项目中的 .tsx 或 .jsx 文件。",
+            "像普通组件一样渲染它，并传入 width、height 或 color 属性。",
+            "开启 currentColor 并传入 color 属性，就能由父组件控制图标颜色。"
+          ]
+        },
+        {
+          "h": "移动端图标小技巧",
+          "p": [
+            "图标尽量保持简单：滤镜和遮罩在低端 Android 设备上渲染开销很大。把坐标取整到一到两位小数可以缩小 JavaScript 包体积；非常小的图标优先使用填充而不是描边，因为细描边在非高清屏上容易发虚。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "支持 Expo 吗？",
+          "a": "支持。Expo SDK 已包含 react-native-svg，用 npx expo install react-native-svg 安装后，生成的组件可以在 Expo Go 和开发构建中使用。"
+        },
+        {
+          "q": "为什么我的 <style> 元素被删掉了？",
+          "a": "react-native-svg 不支持 CSS 样式表。请在转换前把规则改写为 fill、stroke 等属性，或直接设置在对应元素上。"
+        },
+        {
+          "q": "如何在 React Native 中修改图标颜色？",
+          "a": "开启 currentColor，然后给组件传入 color=\"#ff0000\"。react-native-svg 会从 Svg 元素的 color 属性解析 currentColor。"
+        },
+        {
+          "q": "还需要 react-native-svg-transformer 吗？",
+          "a": "如果你提前转换好图标，就不需要。transformer 的作用是让你直接导入 .svg 文件，而本工具生成的是无需任何 Metro 配置的普通组件。"
+        }
+      ]
+    },
+    "svgToVue": {
+      "title": "SVG 转 Vue 组件在线转换（SFC）| SvgJsx",
+      "description": "把 SVG 转换为 Vue 3 单文件组件，支持 <script setup>、可选的带类型 size 属性和 currentColor，在浏览器中完成转换。",
+      "breadcrumb": "SVG 转 Vue",
+      "h1": "把 SVG 转换为 Vue 单文件组件",
+      "intro": "把任意 SVG 包装成 Vue 3 单文件组件（.vue）：干净的 <template>、可选的 <script setup lang=\"ts\"> 和 size 属性，直接导入即可使用。",
+      "sections": [
+        {
+          "h": "Vue 输出是什么样的",
+          "p": [
+            "Vue 模板可以原样接受 SVG 属性，所以转换器会保留 stroke-width、class 等短横线写法。它会清除编辑器残留信息和 XML 声明，并可选择移除 xmlns，然后把标记放进 <template> 块中。",
+            "开启 size 选项后，会生成一个 <script setup> 块，声明带默认值的 size 属性，并绑定到 :width 和 :height。使用 TypeScript 时，属性通过 defineProps<{ size?: number | string }>() 和 withDefaults 声明。"
+          ]
+        },
+        {
+          "h": "属性透传",
+          "p": [
+            "由于 <svg> 是唯一的根元素，Vue 会自动把未声明为 props 的属性透传给它。也就是说，class、style、aria-label 以及 @click 等事件监听器都会直接作用在 <svg> 上，不需要额外代码。因此 Vue 不需要 props 展开选项。"
+          ]
+        },
+        {
+          "h": "使用组件",
+          "p": ["在 Vue 3 或 Nuxt 项目中的典型用法："],
+          "list": [
+            "把输出保存为 components 目录中的 IconName.vue。",
+            "导入它：import IconName from \"./IconName.vue\"。",
+            "在任意模板中渲染 <IconName :size=\"20\" class=\"text-emerald-600\" />。",
+            "开启 currentColor 后，图标颜色会跟随 CSS 的 color 属性。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "输出的代码能用于 Vue 2 吗？",
+          "a": "模板部分在 Vue 2.7 中也能使用，但带 defineProps 的 <script setup> 需要 Vue 2.7 或 Vue 3。更早的 Vue 2 项目请关闭 size 属性，生成只含模板的组件。"
+        },
+        {
+          "q": "可以在 Nuxt 中使用吗？",
+          "a": "可以。把文件放进 components 目录，Nuxt 会按名称自动导入，例如 components/IconArrow.vue 对应 <IconArrow />。"
+        },
+        {
+          "q": "为什么 Vue 会对 SVG 里的 <style> 发出警告？",
+          "a": "<style> 标签有副作用，所以 Vue 会把它们从模板中移除。请把 CSS 移到组件的 <style scoped> 块中，或在转换前把它改写为属性。"
+        },
+        {
+          "q": "vite-svg-loader 是不是更好的选择？",
+          "a": "如果需要在构建时导入大量 SVG，loader 会更方便。转换成 .vue 文件则让你完全掌控标记和 props，而且无需任何构建配置。"
+        }
+      ]
+    },
+    "svgToSolid": {
+      "title": "SVG 转 SolidJS 组件在线转换 | SvgJsx",
+      "description": "把 SVG 转换为 SolidJS 组件：使用 JSX.SvgSVGAttributes 类型，用 splitProps 实现 size 属性并展开 props，免费且保护隐私。",
+      "breadcrumb": "SVG 转 Solid",
+      "h1": "把 SVG 转换为 SolidJS 组件",
+      "intro": "从 SVG 代码创建 SolidJS 图标组件。输出遵循 Solid 的属性约定，用 JSX.SvgSVGAttributes 声明 props 类型，并保持响应式。",
+      "sections": [
+        {
+          "h": "Solid 与 React 有什么不同",
+          "p": [
+            "Solid 的 JSX 会把属性直接映射到 DOM，所以 stroke-width、class 等 SVG 属性会保持文件中的原样，不需要像 React 那样改成驼峰式或 className。",
+            "Solid 的 props 是响应式 getter，解构会破坏响应性。开启 size 属性时，转换器会用 splitProps 把 size 与其余 props 分开，再把其余部分展开到 <svg> 上，确保所有值保持响应式。"
+          ]
+        },
+        {
+          "h": "生成的 TypeScript 类型",
+          "p": [
+            "props 的类型是从 solid-js 导入的 JSX.SvgSVGAttributes<SVGSVGElement>，覆盖所有 SVG 属性和事件处理器。开启 size 选项后，类型会扩展为再加上 { size?: number | string }。"
+          ]
+        },
+        {
+          "h": "在 SolidStart 中使用组件",
+          "p": ["快速上手："],
+          "list": [
+            "把输出保存为 src/components 目录中的 IconName.tsx。",
+            "导入后渲染 <IconName size={18} class=\"icon\" />。",
+            "使用 currentColor 让图标继承周围文字的颜色。",
+            "ref 通过普通的 ref 属性传递，Solid 中不需要 forwardRef。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "为什么 Solid 输出不把属性改成驼峰式？",
+          "a": "Solid 直接在 DOM 元素上设置属性，而 SVG 属性在 DOM 中区分大小写且使用连字符。保留原始名称是最可靠的输出方式。"
+        },
+        {
+          "q": "forwardRef 和 memo 对 Solid 有效吗？",
+          "a": "无效。Solid 组件只运行一次，ref 也作为普通 prop 传递，所以选择 Solid 时会忽略这些 React 专用选项。"
+        },
+        {
+          "q": "组件会保持响应式吗？",
+          "a": "会。转换器从不解构 props，size 属性通过 splitProps 处理并以 local.size 读取，因此更新会直接生效，无需重新创建元素。"
+        },
+        {
+          "q": "输出可以在 Astro 中使用吗？",
+          "a": "可以。Astro 通过 @astrojs/solid-js 集成支持 Solid 组件，图标会在服务端渲染，除非你主动进行水合，否则不会发送任何 JavaScript。"
+        }
+      ]
+    },
+    "svgCurrentcolor": {
+      "title": "SVG currentColor 转换 — 可换色图标 | SvgJsx",
+      "description": "把 SVG 中写死的 fill 和 stroke 颜色替换为 currentColor，让图标继承 CSS 颜色、悬停状态和深色模式。免费，浏览器内完成。",
+      "breadcrumb": "SVG currentColor",
+      "h1": "让 SVG 图标使用 currentColor",
+      "intro": "把写死的 fill 和 stroke 颜色替换为 currentColor，让图标自动继承父元素的文字颜色、在悬停时变色，并适配深色模式。",
+      "sections": [
+        {
+          "h": "currentColor 的作用",
+          "p": [
+            "currentColor 是一个 CSS 关键字，它会解析为元素计算后的 color 值。当 SVG 使用 fill=\"currentColor\" 时，图标会使用父元素的颜色来绘制，无论这个颜色来自 Tailwind 类、链接的悬停状态还是深色模式媒体查询。",
+            "设计工具导出的图标通常带有固定的十六进制颜色，例如 fill=\"#111827\"。这会把图标锁定为一种颜色，迫使你为每个主题维护不同的文件。转换为 currentColor 后，一个文件就能适用于任何场景。"
+          ]
+        },
+        {
+          "h": "转换器会改动哪些内容",
+          "p": ["开启 currentColor 选项后："],
+          "list": [
+            "带颜色值的 fill 和 stroke 属性会变为 currentColor。",
+            "内联 style 属性中的 fill 和 stroke 也会被替换。",
+            "none、transparent、inherit 以及 url(#gradient) 引用会被保留，因此描边轮廓和渐变仍然正常。",
+            "渐变中的 stop-color 等其他颜色保持不变。"
+          ]
+        },
+        {
+          "h": "什么时候不该用 currentColor",
+          "p": [
+            "多色插画、品牌 Logo 和旗帜依赖多种特定颜色，把它们全部替换成同一种颜色会让作品变得扁平。对于这类文件，请保留原始颜色，或者只对需要随主题变化的少数颜色使用 CSS 自定义属性。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "为什么转换后图标变成了黑色？",
+          "a": "currentColor 继承的是 CSS 的 color 属性。如果父元素没有设置颜色，浏览器默认使用黑色。请在图标或其父元素上设置颜色，例如 class=\"text-blue-600\"。"
+        },
+        {
+          "q": "currentColor 对描边有效吗？",
+          "a": "有效。fill 和 stroke 都接受 currentColor，这也是 Lucide、Heroicons 等线性图标库使用 stroke=\"currentColor\" 的原因。"
+        },
+        {
+          "q": "可以在 <img> 标签中使用 currentColor 吗？",
+          "a": "不行。通过 <img> 或 CSS background-image 加载的 SVG 与页面 CSS 是隔离的，currentColor 会被解析为黑色。SVG 必须内联，而组件正好可以做到这一点。"
+        },
+        {
+          "q": "渐变还能正常工作吗？",
+          "a": "能。使用 url(#id) 引用渐变的填充不会被改动，而且即使开启了移除 id，被引用的 id 也会保留。"
+        }
+      ]
+    },
+    "guideSvgIconsInReact": {
+      "title": "如何在 React 中使用 SVG 图标（2026 指南）| SvgJsx",
+      "description": "比较在 React 中使用 SVG 图标的几种方式：内联组件、img 标签、SVGR、雪碧图和图标库，包括优缺点和最佳实践。",
+      "breadcrumb": "React 中的 SVG 图标",
+      "h1": "如何在 React 中使用 SVG 图标",
+      "intro": "在 React 应用中使用 SVG 图标有五种常见方式。本指南从性能、样式和无障碍三个方面进行比较，并说明每种方式适合的场景。",
+      "sections": [
+        {
+          "h": "1. 内联 SVG 组件",
+          "p": [
+            "把每个图标转换成组件（也就是本站自动化的方式）能让你完全掌控：图标通过 currentColor 继承颜色，接收 size、className 等 props，并能用 CSS 或动画库实现动画。打包工具会对未使用的组件做 tree-shaking，所以只有被导入的图标才会被打包。",
+            "代价是这些标记会成为 JavaScript 包的一部分。几十个小图标的影响可以忽略不计，但数百个复杂插画就不一样了。"
+          ]
+        },
+        {
+          "h": "2. img 标签与 CSS 背景",
+          "p": [
+            "<img src=\"/logo.svg\" alt=\"Company\"> 是最简单的方式，浏览器还能缓存文件。但这种 SVG 与你的 CSS 是隔离的，无法在悬停或深色模式下改变颜色。它适合 Logo 和内容固定的插画。"
+          ]
+        },
+        {
+          "h": "3. SVGR 与构建时 loader",
+          "p": [
+            "SVGR（通过 @svgr/webpack 或 vite-plugin-svgr）会在构建时把 .svg 导入转换为组件。对大型图标目录来说很方便，但需要额外的构建配置，而且在不同打包工具和 Turbopack 之间表现可能不一致。用本工具一次性转换，可以得到同类组件，并作为源代码直接提交。"
+          ]
+        },
+        {
+          "h": "4. SVG 雪碧图与 5. 图标库",
+          "p": [
+            "雪碧图把许多 <symbol> 元素放在一个文件中，再通过 <use href=\"#icon\"> 引用。它能让 HTML 保持精简，但会让服务端渲染变得复杂。Lucide、Heroicons、Phosphor 等图标库提供现成的组件，如果它们的风格与你的设计一致，就是理想之选。",
+            "无论选择哪种方式，都请遵守以下无障碍规则："
+          ],
+          "list": [
+            "紧挨文字的装饰性图标加上 aria-hidden=\"true\"。",
+            "独立使用的图标（例如只有图标的按钮）需要可访问名称：在按钮上设置 aria-label，或在 SVG 中加入 <title>。",
+            "保留 viewBox，并用 em 或 rem 设置图标尺寸，使其随用户字号缩放。",
+            "有意义的图标与背景的对比度至少为 3:1（WCAG 1.4.11）。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "在 React 中使用 SVG 图标的最佳方式是什么？",
+          "a": "对于界面图标，带 currentColor 和 size 属性的内联组件最灵活。静态插画用 <img>，如果图标库的风格符合你的设计，也可以直接使用图标库。"
+        },
+        {
+          "q": "内联 SVG 图标会影响性能吗？",
+          "a": "很少。一个典型的 24×24 图标优化后只有 300–600 字节。只有同时渲染数百个复杂图标时才会出现问题，这时雪碧图或 <img> 更合适。"
+        },
+        {
+          "q": "应该用 SVGR 还是手动转换图标？",
+          "a": "SVGR 适合规模大、变动频繁且构建流程稳定的图标集。预先转换好的组件不需要任何配置，在所有打包工具中表现一致。"
+        },
+        {
+          "q": "如何让 SVG 图标符合无障碍要求？",
+          "a": "用 aria-hidden=\"true\" 隐藏装饰性图标，为有意义的图标提供 aria-label 或 <title> 作为可访问名称。不要仅依靠图标传达关键信息。"
+        },
+        {
+          "q": "如何用 Tailwind 设置 SVG 图标尺寸？",
+          "a": "移除固定的 width 和 height，保留 viewBox，然后使用 size-5 或 h-4 w-4 等类。也可以开启 size 属性并传入数字。"
+        }
+      ]
+    },
+    "about": {
+      "title": "关于 SvgJsx — 免费的 SVG 转组件工具",
+      "description": "SvgJsx 是一款免费、隐私优先的工具，完全在浏览器中把 SVG 转换为 React、TypeScript、React Native、Vue 和 Solid 组件。",
+      "breadcrumb": "关于",
+      "h1": "关于 SvgJsx",
+      "intro": "SvgJsx 是一个小而专注的开发者工具：它能快速、私密地把 SVG 代码转换为框架组件，而且无需注册。",
+      "sections": [
+        {
+          "h": "我们为什么做这个工具",
+          "p": [
+            "每个前端项目迟早都需要自定义图标。设计师导出 SVG 文件后，开发者要花时间重命名属性、删除编辑器元数据，再把标记包装成组件。现有的在线转换器往往会把文件上传到服务器、在步骤之间插播广告，或者只支持 React。",
+            "SvgJsx 完全在浏览器中运行，支持团队真正在用的框架，输出的代码遵循现代规范，无需手动清理即可提交。"
+          ]
+        },
+        {
+          "h": "工作原理",
+          "p": [
+            "转换器内置了一个用 TypeScript 编写的小型 XML 解析器。它会把 SVG 解析成树，执行你选择的清理步骤，例如移除元数据、数字取整或把颜色替换为 currentColor，再把这棵树输出为 JSX、Vue 模板或 react-native-svg 组件。这些代码针对每个选项以及格式错误的输入都有自动化测试覆盖。",
+            "网站是静态生成的，通过 CDN 分发。没有后端，没有数据库，也没有账号系统。"
+          ]
+        },
+        {
+          "h": "我们的原则",
+          "p": ["这个项目遵循几条简单的原则："],
+          "list": [
+            "隐私优先：你的 SVG 永远不会离开你的设备。",
+            "输出可读：格式整齐的代码，只包含必要的导入。",
+            "默认安全：脚本和内联事件处理器会被移除。",
+            "支持七种语言：英语、中文、西班牙语、德语、法语、日语和葡萄牙语。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "SvgJsx 由谁维护？",
+          "a": "SvgJsx 是一个独立项目，与 ContrastCheck 和宽高比计算器出自同一团队，这是一系列面向设计师和开发者的免费浏览器端小工具。"
+        },
+        {
+          "q": "SvgJsx 接受功能建议吗？",
+          "a": "欢迎提出新的输出格式或选项建议。目前的重点是为 React、React Native、Vue 和 Solid 提供可靠的输出。"
+        },
+        {
+          "q": "SvgJsx 靠什么盈利？",
+          "a": "目前不盈利。网站是静态的，托管成本极低，也没有任何付费套餐。"
+        },
+        {
+          "q": "生成的代码可以商用吗？",
+          "a": "可以。转换器生成的代码归你所有，可用于任何项目。请注意确认你所转换的原始 SVG 作品的许可协议。"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "隐私政策 — SvgJsx",
+      "description": "SvgJsx 完全在你的浏览器中转换 SVG 文件。不上传任何内容，不设置 Cookie，访问统计匿名且不使用 Cookie。",
+      "breadcrumb": "隐私政策",
+      "h1": "隐私政策",
+      "intro": "简而言之：你的 SVG 文件和生成的代码永远不会离开你的设备。我们不使用 Cookie，访问统计也是匿名的。",
+      "sections": [
+        {
+          "h": "你的文件只留在浏览器中",
+          "p": [
+            "所有处理都在你的浏览器中完成。当你粘贴代码或拖入文件时，文件通过 FileReader API 读取，并在你的设备上用 JavaScript 转换。SVG、预览和生成的代码都不会发送给我们或任何第三方。批量下载用的 ZIP 文件同样在本地生成。",
+            "由于服务器上不存储任何内容，我们也就没有任何数据可以删除、出售或在数据泄露中丢失。关闭标签页后，你的输入就会从内存中清除。"
+          ]
+        },
+        {
+          "h": "访问统计",
+          "p": [
+            "我们使用 Vercel Web Analytics 统计页面浏览量和少量匿名事件，例如有人复制输出、点击预设或切换语言。Vercel Analytics 不使用 Cookie：它不设置 Cookie，不使用本地存储进行跟踪，也不会跨网站建立用户画像。访客通过每天变化的哈希值计数，无法识别你的身份。",
+            "这些事件绝不包含你的 SVG 内容或生成的代码。"
+          ]
+        },
+        {
+          "h": "我们不做的事",
+          "p": ["为了保持简单："],
+          "list": [
+            "没有 Cookie，也没有 Cookie 横幅，因为根本不需要征求同意。",
+            "运行时不加载广告追踪器或第三方字体。",
+            "没有账号，不收集邮箱或任何个人数据。",
+            "不在服务器端存储你转换的任何内容。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "SvgJsx 会上传我的 SVG 文件吗？",
+          "a": "不会。文件通过 FileReader 在本地读取，并在你的浏览器中完成转换。页面加载后即使断开网络，转换器也能继续工作。"
+        },
+        {
+          "q": "网站使用 Cookie 吗？",
+          "a": "不使用。转换器和 Vercel Web Analytics 都不会设置 Cookie，因此不需要同意横幅。"
+        },
+        {
+          "q": "访问统计会收集哪些数据？",
+          "a": "匿名、汇总的页面浏览数据，包括国家、浏览器和来源页面，以及 copy_output 等事件的次数。不收集个人数据，也不收集 SVG 内容。"
+        },
+        {
+          "q": "这份政策会变更吗？",
+          "a": "如果我们改变数据处理方式，会首先更新本页面。核心原则不会改变：你的文件只在你的设备上处理。"
+        }
+      ]
+    }
+  }
+}

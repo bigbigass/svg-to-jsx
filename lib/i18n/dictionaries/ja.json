@@ -1,0 +1,640 @@
+{
+  "meta": {
+    "ogLocale": "ja_JP",
+    "tagline": "SVG を JSX・React・Vue・Solid に変換"
+  },
+  "nav": {
+    "skip": "本文へスキップ",
+    "main": "メインナビゲーション",
+    "react": "React",
+    "tsx": "TSX",
+    "reactNative": "React Native",
+    "vue": "Vue",
+    "solid": "Solid",
+    "guide": "ガイド",
+    "language": "言語"
+  },
+  "footer": {
+    "about": "このサイトについて",
+    "privacy": "プライバシー",
+    "sisterSites": "姉妹サイト",
+    "contrast": "ContrastCheck — WCAG コントラストチェッカー",
+    "aspect": "アスペクト比計算ツール",
+    "note": "ブラウザだけで動く無料の SVG→コンポーネント変換ツールです。ファイルが端末の外に出ることはありません。",
+    "breadcrumb": "パンくずリスト"
+  },
+  "common": {
+    "faqTitle": "よくある質問",
+    "relatedTitle": "関連する変換ツールとガイド"
+  },
+  "tool": {
+    "regionLabel": "SVG 変換ツール",
+    "presetsLabel": "クイックプリセット",
+    "presets": {
+      "react": "React",
+      "reactTs": "React + TS",
+      "icon": "アイコン（currentColor + size）",
+      "reactNative": "React Native",
+      "vue": "Vue SFC",
+      "solid": "Solid"
+    },
+    "inputLabel": "SVG 入力",
+    "inputPlaceholder": "ここに <svg>…</svg> のコードを貼り付け",
+    "dropHint": ".svg ファイルをここにドロップ、または",
+    "chooseFiles": "ファイルを選択",
+    "fileNote": "ファイルは FileReader でローカルに読み込まれ、アップロードされることはありません。",
+    "loadSample": "サンプルを読み込む",
+    "clear": "クリア",
+    "outputLabel": "出力",
+    "emptyOutput": "SVG を貼り付けるかファイルをドロップすると、生成されたコンポーネントが表示されます。",
+    "copy": "コードをコピー",
+    "copied": "コピーしました！",
+    "download": "{file} をダウンロード",
+    "targetLabel": "出力形式",
+    "targets": {
+      "react": "React コンポーネント",
+      "react-native": "React Native（react-native-svg）",
+      "vue": "Vue 単一ファイルコンポーネント",
+      "solid": "Solid コンポーネント",
+      "jsx": "JSX スニペットのみ"
+    },
+    "optionsLabel": "オプション",
+    "options": {
+      "componentName": "コンポーネント名",
+      "typescript": "TypeScript",
+      "currentColor": "色を currentColor に置き換える",
+      "sizeProp": "size プロパティを追加",
+      "spreadProps": "{...props} を展開",
+      "forwardRef": "forwardRef でラップ",
+      "memo": "memo でラップ",
+      "removeDimensions": "width/height を削除（viewBox は保持）",
+      "stripXmlns": "xmlns を削除",
+      "stripComments": "コメントを削除",
+      "stripMetadata": "メタデータとエディタ情報を削除",
+      "stripIds": "未使用の id を削除",
+      "collapseWhitespace": "空白を圧縮",
+      "precision": "数値を丸める",
+      "precisionOff": "オフ",
+      "decimals": "小数点以下 {n} 桁",
+      "exportStyle": "エクスポート",
+      "exportDefault": "default エクスポート",
+      "exportNamed": "名前付きエクスポート"
+    },
+    "previewLabel": "プレビュー",
+    "previewAlt": "変換後の SVG のプレビュー",
+    "sizeOriginal": "元の SVG",
+    "sizeOptimized": "最適化後の SVG",
+    "sizeOutput": "コンポーネント",
+    "errorTitle": "この SVG は変換できませんでした",
+    "errorLine": "{line} 行目",
+    "errors": {
+      "empty": "入力が空です。SVG コードを貼り付けるか、.svg ファイルをドロップしてください。",
+      "noSvgRoot": "ルート要素は <svg> である必要があります。",
+      "unclosedTag": "閉じられていないタグがあります：<{detail}>。",
+      "mismatchedTag": "終了タグが開始タグと一致しません（{detail}）。",
+      "unexpectedClosingTag": "予期しない終了タグ </{detail}> があります。",
+      "invalidAttribute": "「{detail}」付近の属性が不正です。属性値は引用符で囲む必要があります。",
+      "duplicateAttribute": "属性「{detail}」が同じ要素に 2 回出現しています。",
+      "unterminated": "「{detail}」が見つかる前にコードが終わっています。",
+      "multipleRoots": "1 ファイルにつきルートの <svg> 要素は 1 つだけです。",
+      "textOutsideRoot": "<svg> 要素の外側にテキストがあります。",
+      "unknown": "変換中に予期しないエラーが発生しました。"
+    },
+    "warningsTitle": "注意",
+    "warnings": {
+      "scriptRemoved": "安全のため <script> 要素を削除しました。",
+      "eventHandlerRemoved": "イベントハンドラ属性 {detail} を削除しました。",
+      "rnUnsupportedElement": "<{detail}> は react-native-svg でサポートされていないため削除しました。",
+      "rnClassRemoved": "React Native は class 属性をサポートしていないため削除しました。",
+      "vueStyleTag": "Vue テンプレートはマークアップ内の <style> タグを無視します。ルールは <style> ブロックに移動してください。"
+    },
+    "batchTitle": "一括変換",
+    "batchCount": "{n} 件のファイルを変換",
+    "batchFailed": "{n} 件失敗",
+    "downloadZip": "ZIP をダウンロード",
+    "batchShow": "表示",
+    "batchError": "エラー"
+  },
+  "pages": {
+    "home": {
+      "title": "SVG→JSX 変換ツール — React・TSX・Vue・Solid | SvgJsx",
+      "description": "無料の SVG→JSX 変換ツール。SVG をブラウザ上で React、TypeScript、React Native、Vue、Solid のコンポーネントに変換。アップロード不要。",
+      "breadcrumb": "ホーム",
+      "h1": "SVG を JSX・React コンポーネントに変換",
+      "intro": "SVG コードを貼り付けるか .svg ファイルをドロップするだけで、React、TypeScript、React Native、Vue、Solid 向けのすぐにコミットできるきれいなコンポーネントが手に入ります。処理はすべてブラウザ内で完結します。",
+      "sections": [
+        {
+          "h": "この SVG 変換ツールでできること",
+          "p": [
+            "Figma、Illustrator、Sketch、Inkscape から書き出した SVG は正しい XML ですが、正しい JSX ではありません。React では stroke-width ではなく strokeWidth のようなキャメルケースの props、class ではなく className、CSS 文字列ではなくスタイルオブジェクトが必要です。さらにデザインツールは XML 宣言、コメント、メタデータ、名前空間付きの属性を書き出すため、バンドルが膨らみ警告の原因になります。",
+            "SvgJsx は小さな XML パーサーで SVG を解析し、各属性をフレームワークが期待する形に書き換えて、整形済みのコンポーネントを出力します。TypeScript の型、size プロパティ、currentColor による塗り、forwardRef、memo、エクスポート形式を選んで、コードをコピーするかファイルとしてダウンロードできます。"
+          ]
+        },
+        {
+          "h": "SVG を React コンポーネントに変換する手順",
+          "p": ["数秒で完了します。"],
+          "list": [
+            "入力欄に SVG コードを貼り付けるか、1 つ以上の .svg ファイルをドロップします。",
+            "出力形式を選びます：React、React Native、Vue、Solid、または JSX スニペットのみ。",
+            "コンポーネント名と、TypeScript・currentColor・size プロパティなどのオプションを設定します。",
+            "ライブプレビューとサイズ比較を確認し、コードをコピーするかファイルをダウンロードします。複数ファイルは ZIP にまとめられます。"
+          ]
+        },
+        {
+          "h": "自動で行われる変換",
+          "p": [
+            "ハイフン付きの属性はキャメルケースに（stroke-linecap → strokeLinecap）、名前空間付きの属性はフラットに（xlink:href → xlinkHref）、インラインの style 文字列は JavaScript オブジェクトに変換されます。data-* と aria-* 属性は React がそのまま受け付けるため変更しません。script 要素とインラインのイベントハンドラは削除されるので、貼り付けたファイルからアプリにコードが紛れ込むことはありません。",
+            "軽量な最適化として空白を圧縮し、座標を指定した小数点以下の桁数に丸めることもできます。多くのアイコンセットでは、重い SVGO に頼らずマークアップを 20〜40% 削減できます。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "この SVG→JSX 変換ツールは無料ですか？",
+          "a": "はい、完全に無料です。アカウント登録も利用回数の制限もありません。静的サイトなので、利用者に転嫁すべきサーバー費用も発生しません。"
+        },
+        {
+          "q": "SVG ファイルはどこかにアップロードされますか？",
+          "a": "いいえ。ファイルはブラウザの FileReader API で読み込まれ、端末上の JavaScript で変換されます。サーバーには何も送信されないため、社外秘のロゴやアイコンにも安心して使えます。"
+        },
+        {
+          "q": "SVG と JSX の違いは何ですか？",
+          "a": "SVG は XML のマークアップで、JSX は JavaScript の構文拡張です。JSX ではキャメルケースの属性名、class の代わりの className、文字列ではなくオブジェクトの style、特殊文字を囲む波括弧が必要なため、生の SVG はそのままではコンパイルできないことがよくあります。"
+        },
+        {
+          "q": "Figma や Illustrator から書き出したファイルにも使えますか？",
+          "a": "はい。エディタ固有のメタデータ、コメント、sodipodi・inkscape 属性、XML 宣言はデフォルトで削除されます。参照されている id は保持されるため、グラデーション、マスク、クリップパスも正しく動作します。"
+        },
+        {
+          "q": "多数の SVG アイコンを一度に変換できますか？",
+          "a": "できます。複数の .svg ファイルをドロップすると、それぞれがファイル名に基づくコンポーネントになります。すべてのアイコンを再エクスポートする index ファイル付きの ZIP でまとめてダウンロードできます。"
+        }
+      ]
+    },
+    "svgToReact": {
+      "title": "SVG を React コンポーネントに変換（JSX）| SvgJsx",
+      "description": "SVG をオンラインで React コンポーネントに変換。キャメルケース props、className、style オブジェクト、size プロパティ、{...props} に対応。無料。",
+      "breadcrumb": "SVG→React",
+      "h1": "SVG を React コンポーネントに変換",
+      "intro": "あらゆる SVG アイコンやイラストを、JSX 対応の属性、props の展開、オプションのサイズ・色プロパティを備えた React 関数コンポーネントに変換します。",
+      "sections": [
+        {
+          "h": "なぜ SVG を React にそのまま貼り付けてはいけないのか",
+          "p": [
+            "生の SVG を .jsx ファイルに貼り付けると、「Invalid DOM property stroke-width」や「Invalid DOM property class」といった警告が大量に表示され、style 属性や XML 宣言が含まれているとコンパイルエラーになることもあります。大きなアイコンセットで属性を 1 つずつ手作業で書き換えるのは、時間がかかりミスも起きやすい作業です。",
+            "このツールは名前の書き換えを自動で行い、props を受け取れるコンポーネントでマークアップをラップします。ルートの <svg> に {...props} が展開されるので、親から className、aria-label、onClick、任意の幅などを渡せ、アイコン自体を編集し直す必要はありません。"
+          ]
+        },
+        {
+          "h": "React アイコンのおすすめ設定",
+          "p": ["再利用可能なアイコンコンポーネントには、次の設定をおすすめします。"],
+          "list": [
+            "currentColor を有効にして、親要素の文字色を継承させ、ダークモードにも対応させる。",
+            "size プロパティを有効にして、size={20} のように 1 つの値で幅と高さを制御する。",
+            "viewBox を残し、固定の width と height を削除して CSS で拡大縮小できるようにする。",
+            "ツールチップやアニメーションなど、親が <svg> 要素自体を必要とする場合だけ forwardRef を使う。"
+          ]
+        },
+        {
+          "h": "インラインコンポーネントと画像ファイルの使い分け",
+          "p": [
+            "インライン SVG コンポーネントは CSS でスタイルを付けたり、アニメーションさせたり、ホバー時に色を変えたりでき、追加のネットワークリクエストも発生しません。一方、変化しない大きなイラストは、ブラウザが個別にキャッシュできる <img src=\"/file.svg\"> のほうが効率的な場合があります。アイコンや UI グラフィックにはコンポーネント、重いアートワークには img タグを使い分けましょう。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "対応している React のバージョンは？",
+          "a": "出力は通常の関数コンポーネントで、React 16.8 以降（React 18・19 を含む）で動作します。forwardRef と memo はオプションで、有効にしたときだけインポートされます。"
+        },
+        {
+          "q": "生成されたファイルで React をインポートする必要はありますか？",
+          "a": "不要です。Next.js、Vite、Create React App 4 以降が採用している新しい JSX 変換では、React をスコープに入れる必要がありません。ツールはコンポーネントが実際に使うものだけをインポートします。"
+        },
+        {
+          "q": "親からアイコンの色を変えるには？",
+          "a": "currentColor オプションを有効にしてください。fill と stroke が currentColor に置き換わり、アイコンは親の CSS カラー（例：Tailwind の text-red-600 クラス）で描画されます。"
+        },
+        {
+          "q": "アイコンに onClick や aria-label を渡せますか？",
+          "a": "はい。コンポーネントはルートの <svg> に {...props} を展開するため、渡した SVG 属性やイベントハンドラはそのまま転送され、デフォルト値を上書きします。"
+        }
+      ]
+    },
+    "svgToTsx": {
+      "title": "SVG を TSX に変換 — 型付き React コンポーネント | SvgJsx",
+      "description": "SVG を TSX に変換：SVGProps<SVGSVGElement> 型、size プロパティ、forwardRef、memo に対応した React コンポーネント。ブラウザ内で完結。",
+      "breadcrumb": "SVG→TSX",
+      "h1": "SVG を TSX に：型付き React アイコンコンポーネント",
+      "intro": "SVG から正しい props 型を持つ TypeScript の React コンポーネントを生成します。どのアイコンも className、aria 属性、イベントハンドラを補完付きで受け取れます。",
+      "sections": [
+        {
+          "h": "生成される型の仕組み",
+          "p": [
+            "コンポーネントの props は SVGProps<SVGSVGElement> 型です。これは React が <svg> 要素に使っている型と同じなので、すべての SVG 属性とイベントハンドラが補完され、不正な props はコンパイル時に TypeScript が検出します。",
+            "size オプションを有効にすると props は SVGProps<SVGSVGElement> & { size?: number | string } になり、width と height は size から設定されます。forwardRef を有効にすると ref は Ref<SVGSVGElement> 型になり、親が計測やアニメーションライブラリ用に ref を渡せます。"
+          ]
+        },
+        {
+          "h": "TSX 出力のチェックリスト",
+          "p": ["生成したアイコンをコミットする前に、次の点を確認しましょう。"],
+          "list": [
+            "コンポーネント名が PascalCase で、ファイル名と一致している（ArrowLeft.tsx）。",
+            "SVGProps と Ref は型としてのみインポートされ、JavaScript バンドルから消える。",
+            "viewBox が残っている。これがないとアイコンは拡大縮小できません。",
+            "コードベースで default エクスポートが禁止されている場合は名前付きエクスポートを使う。"
+          ]
+        },
+        {
+          "h": "strict モードにも対応",
+          "p": [
+            "コードは \"strict\": true と、Next.js・Vite・esbuild が要求する isolatedModules の両方でコンパイルできます。any 型は一切生成されず、size のデフォルト値は分割代入の中にリテラルとして書かれます。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "SVGProps と ComponentProps<\"svg\"> のどちらを使うべき？",
+          "a": "どちらも同じ属性を表します。SVGProps<SVGSVGElement> は要素の型が明示的で、React 自身の型定義でも <svg> に使われているため、このツールではこちらを採用しています。"
+        },
+        {
+          "q": "React 19 でも forwardRef は必要ですか？",
+          "a": "React 19 では関数コンポーネントが ref を通常の prop として受け取れるため、forwardRef は必須ではありません。ただし React 18 をサポートする必要があるライブラリでは今も有用なので、デフォルトでオフのオプションとして用意しています。"
+        },
+        {
+          "q": "size プロパティが number | string 型なのはなぜ？",
+          "a": "数値はピクセル値として扱われ、文字列なら \"1em\" や \"1.5rem\" などの CSS 単位を指定して、周囲の文字サイズに合わせてアイコンを拡大縮小できるからです。"
+        },
+        {
+          "q": "アイコンフォルダをまるごと TSX に変換できますか？",
+          "a": "できます。すべてのファイルを一度にドロップすると、SVG と同じ名前の .tsx ファイルが生成され、index.ts のバレルファイルとともに ZIP にまとめられます。"
+        }
+      ]
+    },
+    "svgToReactNative": {
+      "title": "SVG を React Native に変換（react-native-svg）| SvgJsx",
+      "description": "SVG を react-native-svg 用の React Native コンポーネントに変換。path・g・circle を Path・G・Circle に、SvgProps 型付きで出力。無料。",
+      "breadcrumb": "SVG→React Native",
+      "h1": "SVG を React Native（react-native-svg）に変換",
+      "intro": "React Native は <svg> タグを直接描画できません。このツールは SVG を Svg、Path、G、Circle などの react-native-svg コンポーネントに書き換え、正しいインポート文も生成します。",
+      "sections": [
+        {
+          "h": "React Native 向け出力の違い",
+          "p": [
+            "react-native-svg は SVG の各要素に対応する大文字始まりのコンポーネントを提供しています。<path> は <Path>、<g> は <G>、<linearGradient> は <LinearGradient> になります。ツールはサポートされているすべての要素を対応付け、実際に使うコンポーネントだけを 1 行でインポートし、props を SvgProps 型にします。",
+            "<title>、<desc>、<style>、<metadata> などネイティブに対応するものがない要素は、実行時にクラッシュしないよう注意メッセージとともに削除されます。React Native には CSS クラスがないため、class 属性も削除されます。"
+          ]
+        },
+        {
+          "h": "react-native-svg のセットアップ",
+          "p": ["生成したコンポーネントを使う手順："],
+          "list": [
+            "ライブラリをインストールします：Expo なら npx expo install react-native-svg、素の React Native なら npm install react-native-svg。",
+            "変換したコードをプロジェクト内の .tsx または .jsx ファイルとして保存します。",
+            "通常のコンポーネントと同じように描画し、width、height、color などを渡します。",
+            "currentColor を有効にして color プロパティを渡すと、親からアイコンの色を変えられます。"
+          ]
+        },
+        {
+          "h": "モバイル向けアイコンのヒント",
+          "p": [
+            "アイコンはシンプルに保ちましょう。フィルターやマスクはローエンドの Android 端末では描画コストが高くなります。座標を小数点以下 1〜2 桁に丸めれば JavaScript バンドルを小さくでき、ごく小さなアイコンでは線よりも塗りを優先すると、高解像度でない画面でもにじみにくくなります。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Expo で使えますか？",
+          "a": "はい。react-native-svg は Expo SDK に含まれています。npx expo install react-native-svg でインストールすれば、生成したコンポーネントは Expo Go でも開発ビルドでも動作します。"
+        },
+        {
+          "q": "<style> 要素が削除されたのはなぜ？",
+          "a": "react-native-svg は CSS スタイルシートをサポートしていないためです。変換前にルールを fill や stroke などの属性に書き換えるか、各要素に直接指定してください。"
+        },
+        {
+          "q": "React Native でアイコンの色を変えるには？",
+          "a": "currentColor を有効にし、コンポーネントに color=\"#ff0000\" を渡します。react-native-svg は Svg 要素の color プロパティから currentColor を解決します。"
+        },
+        {
+          "q": "react-native-svg-transformer はまだ必要ですか？",
+          "a": "アイコンを事前に変換しておくなら不要です。transformer は .svg ファイルを直接インポートするためのものですが、このツールは Metro の設定が不要な通常のコンポーネントを出力します。"
+        }
+      ]
+    },
+    "svgToVue": {
+      "title": "SVG を Vue コンポーネントに変換（SFC）| SvgJsx",
+      "description": "SVG を <script setup>、型付きの size プロパティ（任意）、currentColor に対応した Vue 3 単一ファイルコンポーネントに変換。ブラウザで完結。",
+      "breadcrumb": "SVG→Vue",
+      "h1": "SVG を Vue 単一ファイルコンポーネントに変換",
+      "intro": "任意の SVG を、きれいな <template>、オプションの <script setup lang=\"ts\">、size プロパティを備えた Vue 3 の単一ファイルコンポーネント（.vue）に変換し、そのままアプリにインポートできます。",
+      "sections": [
+        {
+          "h": "Vue 向け出力の内容",
+          "p": [
+            "Vue テンプレートは SVG 属性をそのまま受け付けるため、stroke-width や class などのケバブケースの名前は維持されます。エディタ由来の不要な情報と XML 宣言を取り除き、必要に応じて xmlns も削除したうえで、マークアップを <template> ブロックに配置します。",
+            "size オプションを有効にすると、デフォルト値付きの size プロパティを宣言する <script setup> ブロックが追加され、:width と :height にバインドされます。TypeScript の場合は defineProps<{ size?: number | string }>() と withDefaults で宣言します。"
+          ]
+        },
+        {
+          "h": "属性のフォールスルー",
+          "p": [
+            "<svg> が唯一のルート要素なので、props として宣言されていない属性は Vue が自動的に転送します。つまり class、style、aria-label、@click などのイベントリスナーは、追加のコードなしで <svg> に適用されます。そのため Vue では props 展開オプションは不要です。"
+          ]
+        },
+        {
+          "h": "コンポーネントの使い方",
+          "p": ["Vue 3 や Nuxt プロジェクトでの典型的な使い方："],
+          "list": [
+            "出力を components フォルダに IconName.vue として保存します。",
+            "インポートします：import IconName from \"./IconName.vue\"。",
+            "任意のテンプレートで <IconName :size=\"20\" class=\"text-emerald-600\" /> と描画します。",
+            "currentColor を有効にすると、アイコンは CSS の color プロパティに従います。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "出力は Vue 2 でも動きますか？",
+          "a": "テンプレート部分は Vue 2.7 でも動作しますが、defineProps を使う <script setup> には Vue 2.7 または Vue 3 が必要です。それより古い Vue 2 のプロジェクトでは size プロパティをオフにして、テンプレートのみのコンポーネントを生成してください。"
+        },
+        {
+          "q": "Nuxt で使えますか？",
+          "a": "はい。ファイルを components ディレクトリに置けば、Nuxt が名前で自動インポートします。たとえば components/IconArrow.vue は <IconArrow /> として使えます。"
+        },
+        {
+          "q": "SVG 内の <style> について Vue が警告を出すのはなぜ？",
+          "a": "<style> タグには副作用があるため、Vue はテンプレートからそれを取り除きます。CSS はコンポーネントの <style scoped> ブロックに移すか、変換前に属性へ書き換えてください。"
+        },
+        {
+          "q": "vite-svg-loader のほうがよいのでしょうか？",
+          "a": "ビルド時に大量の SVG をインポートするならローダーが便利です。.vue ファイルに変換すれば、マークアップと props を完全に管理でき、ビルド設定も不要です。"
+        }
+      ]
+    },
+    "svgToSolid": {
+      "title": "SVG を SolidJS コンポーネントに変換 | SvgJsx",
+      "description": "SVG を SolidJS コンポーネントに変換。JSX.SvgSVGAttributes による型付け、size 用の splitProps、props の展開に対応。無料で安全。",
+      "breadcrumb": "SVG→Solid",
+      "h1": "SVG を SolidJS コンポーネントに変換",
+      "intro": "SVG コードから SolidJS のアイコンコンポーネントを作成します。出力は Solid の属性の慣例に従い、props を JSX.SvgSVGAttributes で型付けし、リアクティブ性も保ちます。",
+      "sections": [
+        {
+          "h": "Solid と React の違い",
+          "p": [
+            "Solid の JSX は属性をそのまま DOM に反映するため、stroke-width や class などの SVG 属性はファイルに書かれたとおりに保持されます。React のようにキャメルケースや className に書き換える必要はありません。",
+            "Solid の props はリアクティブなゲッターなので、分割代入するとリアクティブ性が失われます。size プロパティを有効にすると、ツールは splitProps で size と残りの props を分け、残りを <svg> に展開するため、すべての値がリアクティブなまま保たれます。"
+          ]
+        },
+        {
+          "h": "生成される TypeScript の型",
+          "p": [
+            "props は solid-js からインポートした JSX.SvgSVGAttributes<SVGSVGElement> 型で、すべての SVG 属性とイベントハンドラをカバーします。size オプションを有効にすると、型に { size?: number | string } が追加されます。"
+          ]
+        },
+        {
+          "h": "SolidStart での使い方",
+          "p": ["始め方："],
+          "list": [
+            "出力を src/components フォルダに IconName.tsx として保存します。",
+            "インポートして <IconName size={18} class=\"icon\" /> と描画します。",
+            "currentColor を使えば周囲の文字色を継承できます。",
+            "ref は通常の ref プロパティで渡せます。Solid では forwardRef は不要です。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Solid 向けに属性をキャメルケースにしないのはなぜ？",
+          "a": "Solid は DOM 要素に属性を直接設定します。DOM 上の SVG 属性は大文字小文字を区別し、ハイフンを含むため、元の名前を保つのが最も確実な出力です。"
+        },
+        {
+          "q": "forwardRef と memo は Solid にも適用されますか？",
+          "a": "いいえ。Solid のコンポーネントは一度だけ実行され、ref も通常の prop として渡されるため、Solid を選んだ場合これらの React 専用オプションは無視されます。"
+        },
+        {
+          "q": "コンポーネントはリアクティブなままですか？",
+          "a": "はい。ツールは props を分割代入しません。size プロパティは splitProps で扱い local.size として読むため、要素を作り直すことなく更新が反映されます。"
+        },
+        {
+          "q": "出力を Astro で使えますか？",
+          "a": "はい。Astro は @astrojs/solid-js インテグレーションで Solid コンポーネントをサポートしており、ハイドレートしない限り JavaScript を送らずにサーバー側でアイコンを描画できます。"
+        }
+      ]
+    },
+    "svgCurrentcolor": {
+      "title": "SVG を currentColor 化 — 色を変えられるアイコン | SvgJsx",
+      "description": "SVG の固定の fill・stroke 色を currentColor に置き換え、アイコンが CSS の色、ホバー状態、ダークモードを継承するようにします。無料。",
+      "breadcrumb": "SVG currentColor",
+      "h1": "SVG アイコンを currentColor 対応にする",
+      "intro": "固定値の fill と stroke の色を currentColor に置き換えると、アイコンは親要素の文字色を継承し、ホバーで色が変わり、ダークモードにも自動で対応します。",
+      "sections": [
+        {
+          "h": "currentColor の仕組み",
+          "p": [
+            "currentColor は、要素の color プロパティの計算値を参照する CSS キーワードです。SVG で fill=\"currentColor\" を使うと、Tailwind のクラス、リンクのホバー状態、ダークモードのメディアクエリなど、どこから来た色であっても親要素に適用されている色でアイコンが描画されます。",
+            "デザインツールは fill=\"#111827\" のような固定の 16 進数カラーでアイコンを書き出します。これではアイコンが 1 色に固定され、テーマごとに別のファイルを管理しなければなりません。currentColor に変換すれば、1 つのファイルをどこでも使えます。"
+          ]
+        },
+        {
+          "h": "ツールが変更する内容",
+          "p": ["currentColor オプションを有効にすると："],
+          "list": [
+            "色の値を持つ fill と stroke 属性が currentColor になります。",
+            "インラインの style 属性内の fill と stroke も置き換えられます。",
+            "none、transparent、inherit、url(#gradient) の参照はそのまま残るので、輪郭線やグラデーションも正しく動作します。",
+            "グラデーションの stop-color など、その他の色は変更されません。"
+          ]
+        },
+        {
+          "h": "currentColor を使うべきでない場合",
+          "p": [
+            "多色のイラスト、ブランドロゴ、国旗などは複数の特定の色で成り立っています。すべてを 1 色に置き換えると平坦な見た目になってしまいます。こうしたファイルは元の色を残すか、テーマに合わせて変えたい一部の色だけに CSS カスタムプロパティを使いましょう。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "変換後にアイコンが黒くなったのはなぜ？",
+          "a": "currentColor は CSS の color プロパティを継承します。親に色が設定されていない場合、ブラウザのデフォルトは黒です。アイコンか親要素に色を設定してください（例：class=\"text-blue-600\"）。"
+        },
+        {
+          "q": "currentColor は線（stroke）にも使えますか？",
+          "a": "使えます。fill と stroke のどちらも currentColor を受け付けます。Lucide や Heroicons などの線画アイコンセットが stroke=\"currentColor\" を使っているのはそのためです。"
+        },
+        {
+          "q": "<img> タグで currentColor は使えますか？",
+          "a": "使えません。<img> や CSS の background-image で読み込んだ SVG はページの CSS から切り離されるため、currentColor は黒になります。SVG はインラインで埋め込む必要があり、それを実現するのがコンポーネントです。"
+        },
+        {
+          "q": "グラデーションは引き続き動作しますか？",
+          "a": "はい。url(#id) でグラデーションを参照している塗りは変更されず、id の削除を有効にしていても参照されている id は保持されます。"
+        }
+      ]
+    },
+    "guideSvgIconsInReact": {
+      "title": "React で SVG アイコンを使う方法（2026 年版）| SvgJsx",
+      "description": "React で SVG アイコンを使う方法を比較：インラインコンポーネント、img タグ、SVGR、スプライト、アイコンライブラリの長所と短所を解説。",
+      "breadcrumb": "React の SVG アイコン",
+      "h1": "React で SVG アイコンを使う方法",
+      "intro": "React アプリに SVG アイコンを組み込む一般的な方法は 5 つあります。このガイドではパフォーマンス、スタイリング、アクセシビリティの観点から比較し、それぞれが適した場面を紹介します。",
+      "sections": [
+        {
+          "h": "1. インライン SVG コンポーネント",
+          "p": [
+            "各アイコンをコンポーネントに変換する方法（このサイトが自動化している方法）なら、すべてを制御できます。アイコンは currentColor で色を継承し、size や className などの props を受け取り、CSS やアニメーションライブラリで動かせます。バンドラーは未使用のコンポーネントをツリーシェイキングで除外するので、インポートしたアイコンだけが配信されます。",
+            "その代わり、マークアップは JavaScript バンドルの一部になります。小さなアイコンが数十個程度なら影響はわずかですが、複雑なイラストが数百個となると話は別です。"
+          ]
+        },
+        {
+          "h": "2. img タグと CSS 背景",
+          "p": [
+            "<img src=\"/logo.svg\" alt=\"会社名\"> は最もシンプルな方法で、ブラウザがファイルをキャッシュできます。ただし SVG は CSS から切り離されるため、ホバー時やダークモードで色を変えることはできません。変化しないロゴやイラストに向いています。"
+          ]
+        },
+        {
+          "h": "3. SVGR とビルド時ローダー",
+          "p": [
+            "SVGR（@svgr/webpack や vite-plugin-svgr 経由）は、ビルド時に .svg のインポートをコンポーネントに変換します。大量のアイコンフォルダには便利ですが、ビルド設定が増え、バンドラーや Turbopack によって挙動が異なる場合があります。このツールで一度変換すれば、同じ種類のコンポーネントをソースコードとしてコミットできます。"
+          ]
+        },
+        {
+          "h": "4. SVG スプライトと 5. アイコンライブラリ",
+          "p": [
+            "スプライトは多数の <symbol> 要素を 1 つのファイルにまとめ、<use href=\"#icon\"> で参照する方法です。HTML を小さく保てますが、サーバーサイドレンダリングが複雑になります。Lucide、Heroicons、Phosphor などのアイコンライブラリは完成済みのコンポーネントを提供しており、スタイルがデザインに合うなら理想的です。",
+            "どの方法を選ぶにしても、次のアクセシビリティのルールを守りましょう。"
+          ],
+          "list": [
+            "テキストに添える装飾的なアイコンには aria-hidden=\"true\" を付ける。",
+            "アイコンだけのボタンなど単独で使うアイコンには、ボタンの aria-label か SVG 内の <title> でアクセシブルな名前を付ける。",
+            "viewBox を残し、アイコンのサイズを em や rem で指定して、ユーザーの文字サイズに合わせて拡大縮小させる。",
+            "意味を持つアイコンは 3:1 以上のコントラスト比を確保する（WCAG 1.4.11）。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "React で SVG アイコンを使う最善の方法は？",
+          "a": "UI アイコンなら、currentColor と size プロパティを備えたインラインコンポーネントが最も柔軟です。静的なアートワークには <img> を、スタイルが合うならアイコンライブラリを使いましょう。"
+        },
+        {
+          "q": "インライン SVG アイコンはパフォーマンスに悪影響がありますか？",
+          "a": "ほとんどありません。一般的な 24×24 のアイコンは最適化後 300〜600 バイト程度です。問題になるのは複雑なアイコンを数百個同時に描画する場合で、そのときはスプライトや <img> が適しています。"
+        },
+        {
+          "q": "SVGR を使うべき？それとも手動で変換すべき？",
+          "a": "SVGR は、頻繁に変わる大規模なアイコンセットと安定したビルドパイプラインがある場合に向いています。事前に変換したコンポーネントは設定不要で、どのバンドラーでも同じように動作します。"
+        },
+        {
+          "q": "SVG アイコンをアクセシブルにするには？",
+          "a": "装飾的なアイコンは aria-hidden=\"true\" で隠し、意味のあるアイコンには aria-label や <title> でアクセシブルな名前を付けます。重要な情報をアイコンだけで伝えないようにしましょう。"
+        },
+        {
+          "q": "Tailwind で SVG アイコンのサイズを指定するには？",
+          "a": "固定の width と height を削除して viewBox を残し、size-5 や h-4 w-4 などのクラスを適用します。または size プロパティを有効にして数値を渡す方法もあります。"
+        }
+      ]
+    },
+    "about": {
+      "title": "SvgJsx について — 無料の SVG 変換ツール",
+      "description": "SvgJsx は、SVG をブラウザ内で React、TypeScript、React Native、Vue、Solid のコンポーネントに変換する、無料でプライバシー重視のツールです。",
+      "breadcrumb": "このサイトについて",
+      "h1": "SvgJsx について",
+      "intro": "SvgJsx は小さく用途を絞った開発者向けツールです。SVG コードをフレームワークのコンポーネントへ、すばやく、プライベートに、登録不要で変換します。",
+      "sections": [
+        {
+          "h": "開発した理由",
+          "p": [
+            "どんなフロントエンドプロジェクトにも、いずれ独自のアイコンが必要になります。デザイナーが SVG ファイルを書き出し、開発者は属性名の変更、エディタのメタデータ削除、コンポーネントへのラップに時間を費やします。既存のオンライン変換ツールは、ファイルをサーバーにアップロードしたり、手順の合間に広告を表示したり、React にしか対応していなかったりすることが少なくありません。",
+            "SvgJsx はすべてブラウザ内で動作し、チームが実際に使っているフレームワークに対応し、最新の慣例に沿ったコードを出力します。手作業で整えることなく、そのままコミットできます。"
+          ]
+        },
+        {
+          "h": "仕組み",
+          "p": [
+            "変換ツールには TypeScript で書かれた小さな XML パーサーが組み込まれています。SVG からツリーを構築し、メタデータの削除、数値の丸め、色の currentColor への置き換えなど選択したクリーンアップを適用してから、JSX、Vue テンプレート、react-native-svg コンポーネントとして出力します。このコードは各オプションと不正な入力に対する自動テストでカバーされています。",
+            "サイトは静的に生成され、CDN から配信されています。バックエンドもデータベースもアカウント機能もありません。"
+          ]
+        },
+        {
+          "h": "大切にしていること",
+          "p": ["このプロジェクトはいくつかのシンプルな原則に従っています。"],
+          "list": [
+            "プライバシー第一：SVG が端末の外に出ることはありません。",
+            "読みやすい出力：必要なインポートだけを含む整形済みのコード。",
+            "デフォルトで安全：スクリプトとインラインのイベントハンドラは削除されます。",
+            "7 言語に対応：英語、中国語、スペイン語、ドイツ語、フランス語、日本語、ポルトガル語。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "SvgJsx は誰が運営していますか？",
+          "a": "SvgJsx は、ContrastCheck やアスペクト比計算ツールを手がけるチームによる独立したプロジェクトです。デザイナーと開発者のための、ブラウザで動く無料ツールのシリーズです。"
+        },
+        {
+          "q": "機能のリクエストは受け付けていますか？",
+          "a": "はい。新しい出力形式やオプションの提案を歓迎します。現在は React、React Native、Vue、Solid 向けに信頼できる出力を提供することに注力しています。"
+        },
+        {
+          "q": "SvgJsx はどうやって収益を得ていますか？",
+          "a": "現時点では収益を得ていません。静的サイトなのでホスティング費用は最小限で、有料プランもありません。"
+        },
+        {
+          "q": "生成されたコードを商用利用できますか？",
+          "a": "はい。変換ツールが生成したコードはあなたのもので、どんなプロジェクトにも使えます。ただし、変換元の SVG アートワークのライセンスは確認してください。"
+        }
+      ]
+    },
+    "privacy": {
+      "title": "プライバシーポリシー — SvgJsx",
+      "description": "SvgJsx は SVG ファイルをすべてブラウザ内で変換します。アップロードなし、Cookie なし。アクセス解析は匿名で Cookie を使いません。",
+      "breadcrumb": "プライバシー",
+      "h1": "プライバシーポリシー",
+      "intro": "要点：SVG ファイルと生成されたコードがあなたの端末の外に出ることはありません。Cookie は使用せず、アクセス解析も匿名です。",
+      "sections": [
+        {
+          "h": "ファイルはブラウザの中にとどまります",
+          "p": [
+            "すべての処理はブラウザ内で行われます。コードを貼り付けたりファイルをドロップしたりすると、FileReader API で読み込まれ、端末上の JavaScript で変換されます。SVG、プレビュー、生成されたコードが当サイトや第三者に送信されることはありません。一括ダウンロード用の ZIP ファイルもローカルで作成されます。",
+            "サーバーには何も保存されないため、削除・販売・情報漏えいの対象となるデータそのものが存在しません。タブを閉じれば、入力内容はメモリから消去されます。"
+          ]
+        },
+        {
+          "h": "アクセス解析",
+          "p": [
+            "ページビューと、出力のコピー、プリセットのクリック、言語の切り替えといった少数の匿名イベントを数えるために Vercel Web Analytics を使用しています。Vercel Analytics は Cookie を使いません。Cookie を設定せず、追跡のためにローカルストレージを使わず、サイトをまたいだプロファイルも作成しません。訪問者は毎日変わるハッシュで数えられ、個人を特定することはできません。",
+            "イベントに SVG の内容や生成されたコードが含まれることはありません。"
+          ]
+        },
+        {
+          "h": "当サイトが行わないこと",
+          "p": ["シンプルに言えば："],
+          "list": [
+            "Cookie も Cookie バナーもありません。同意を求めるものが何もないからです。",
+            "広告トラッカーや、実行時に読み込むサードパーティフォントはありません。",
+            "アカウント、メールアドレス、個人データの収集はありません。",
+            "変換した内容をサーバー側に保存することはありません。"
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "SvgJsx は SVG ファイルをアップロードしますか？",
+          "a": "いいえ。ファイルは FileReader でローカルに読み込まれ、ブラウザ内で変換されます。ページの読み込み後にインターネット接続を切っても、変換ツールはそのまま動作します。"
+        },
+        {
+          "q": "このサイトは Cookie を使いますか？",
+          "a": "いいえ。変換ツールも Vercel Web Analytics も Cookie を設定しないため、同意バナーは不要です。"
+        },
+        {
+          "q": "アクセス解析ではどんなデータを収集しますか？",
+          "a": "国、ブラウザ、参照元を含む匿名・集計済みのページビューと、copy_output などのイベント数です。個人データや SVG の内容は収集しません。"
+        },
+        {
+          "q": "このポリシーは変更されますか？",
+          "a": "データの扱い方を変更する場合は、まずこのページを更新します。ファイルはあなたの端末上で処理されるという基本ルールは変わりません。"
+        }
+      ]
+    }
+  }
+}

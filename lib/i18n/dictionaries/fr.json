@@ -1,0 +1,640 @@
+{
+  "meta": {
+    "ogLocale": "fr_FR",
+    "tagline": "convertisseur SVG vers JSX, React, Vue et Solid"
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "main": "Navigation principale",
+    "react": "React",
+    "tsx": "TSX",
+    "reactNative": "React Native",
+    "vue": "Vue",
+    "solid": "Solid",
+    "guide": "Guide",
+    "language": "Langue"
+  },
+  "footer": {
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "sisterSites": "Sites partenaires",
+    "contrast": "ContrastCheck — vérificateur de contraste WCAG",
+    "aspect": "Calculateur de ratio d’aspect",
+    "note": "Convertisseur SVG vers composants gratuit, qui fonctionne uniquement dans le navigateur. Vos fichiers ne quittent jamais votre appareil.",
+    "breadcrumb": "Fil d’Ariane"
+  },
+  "common": {
+    "faqTitle": "Questions fréquentes",
+    "relatedTitle": "Convertisseurs et guides associés"
+  },
+  "tool": {
+    "regionLabel": "Convertisseur SVG",
+    "presetsLabel": "Préréglages",
+    "presets": {
+      "react": "React",
+      "reactTs": "React + TS",
+      "icon": "Icône (currentColor + size)",
+      "reactNative": "React Native",
+      "vue": "Vue SFC",
+      "solid": "Solid"
+    },
+    "inputLabel": "Entrée SVG",
+    "inputPlaceholder": "Collez ici le code <svg>…</svg>",
+    "dropHint": "Déposez des fichiers .svg ici ou",
+    "chooseFiles": "choisissez des fichiers",
+    "fileNote": "Les fichiers sont lus localement avec FileReader et ne sont jamais envoyés.",
+    "loadSample": "Charger un exemple",
+    "clear": "Effacer",
+    "outputLabel": "Résultat",
+    "emptyOutput": "Collez un SVG ou déposez un fichier pour voir le composant généré.",
+    "copy": "Copier le code",
+    "copied": "Copié !",
+    "download": "Télécharger {file}",
+    "targetLabel": "Format de sortie",
+    "targets": {
+      "react": "Composant React",
+      "react-native": "React Native (react-native-svg)",
+      "vue": "Composant monofichier Vue",
+      "solid": "Composant Solid",
+      "jsx": "Extrait JSX simple"
+    },
+    "optionsLabel": "Options",
+    "options": {
+      "componentName": "Nom du composant",
+      "typescript": "TypeScript",
+      "currentColor": "Remplacer les couleurs par currentColor",
+      "sizeProp": "Ajouter une prop size",
+      "spreadProps": "Transmettre {...props}",
+      "forwardRef": "Envelopper dans forwardRef",
+      "memo": "Envelopper dans memo",
+      "removeDimensions": "Supprimer width/height (garder viewBox)",
+      "stripXmlns": "Supprimer xmlns",
+      "stripComments": "Supprimer les commentaires",
+      "stripMetadata": "Supprimer les métadonnées et données d’éditeur",
+      "stripIds": "Supprimer les id inutilisés",
+      "collapseWhitespace": "Réduire les espaces",
+      "precision": "Arrondir les nombres",
+      "precisionOff": "Désactivé",
+      "decimals": "{n} décimales",
+      "exportStyle": "Export",
+      "exportDefault": "Export par défaut",
+      "exportNamed": "Export nommé"
+    },
+    "previewLabel": "Aperçu",
+    "previewAlt": "Aperçu du SVG converti",
+    "sizeOriginal": "SVG d’origine",
+    "sizeOptimized": "SVG optimisé",
+    "sizeOutput": "Composant",
+    "errorTitle": "Impossible de convertir ce SVG",
+    "errorLine": "Ligne {line}",
+    "errors": {
+      "empty": "L’entrée est vide. Collez du code SVG ou déposez un fichier .svg.",
+      "noSvgRoot": "L’élément racine doit être <svg>.",
+      "unclosedTag": "Une balise n’est jamais fermée : <{detail}>.",
+      "mismatchedTag": "La balise fermante ne correspond pas à la balise ouvrante ({detail}).",
+      "unexpectedClosingTag": "Balise fermante inattendue </{detail}>.",
+      "invalidAttribute": "Attribut invalide près de « {detail} ». Les valeurs d’attribut doivent être entre guillemets.",
+      "duplicateAttribute": "L’attribut « {detail} » apparaît deux fois sur le même élément.",
+      "unterminated": "Le code se termine avant que « {detail} » soit trouvé.",
+      "multipleRoots": "Un seul élément racine <svg> est autorisé par fichier.",
+      "textOutsideRoot": "Du texte se trouve en dehors de l’élément <svg>.",
+      "unknown": "Erreur inattendue pendant la conversion."
+    },
+    "warningsTitle": "Remarques",
+    "warnings": {
+      "scriptRemoved": "Un élément <script> a été supprimé par sécurité.",
+      "eventHandlerRemoved": "L’attribut de gestionnaire d’événement {detail} a été supprimé.",
+      "rnUnsupportedElement": "<{detail}> n’est pas pris en charge par react-native-svg et a été retiré.",
+      "rnClassRemoved": "Les attributs class ont été supprimés car React Native ne les prend pas en charge.",
+      "vueStyleTag": "Les templates Vue ignorent les balises <style> dans le balisage ; déplacez ces règles dans un bloc <style>."
+    },
+    "batchTitle": "Conversion par lots",
+    "batchCount": "{n} fichiers convertis",
+    "batchFailed": "{n} en échec",
+    "downloadZip": "Télécharger le ZIP",
+    "batchShow": "Afficher",
+    "batchError": "Erreur"
+  },
+  "pages": {
+    "home": {
+      "title": "Convertisseur SVG en JSX — React, TSX, Vue, Solid | SvgJsx",
+      "description": "Convertisseur SVG en JSX gratuit : transformez un SVG en composant React, TypeScript, React Native, Vue ou Solid dans le navigateur, sans envoi.",
+      "breadcrumb": "Accueil",
+      "h1": "Convertisseur SVG en JSX et en composants React",
+      "intro": "Collez du code SVG ou déposez des fichiers .svg et obtenez un composant propre, prêt à être commité, pour React, TypeScript, React Native, Vue ou Solid. Tout s’exécute localement dans votre navigateur.",
+      "sections": [
+        {
+          "h": "Ce que fait ce convertisseur SVG",
+          "p": [
+            "Les fichiers SVG exportés depuis Figma, Illustrator, Sketch ou Inkscape sont du XML valide, mais pas du JSX valide. React attend des props en camelCase comme strokeWidth au lieu de stroke-width, className au lieu de class et un objet de style plutôt qu’une chaîne CSS. Les éditeurs ajoutent aussi des déclarations XML, des commentaires, des blocs de métadonnées et des attributs à espace de noms qui alourdissent votre bundle et déclenchent des avertissements.",
+            "SvgJsx analyse le SVG avec un petit parseur XML, réécrit chaque attribut sous la forme attendue par votre framework et produit un composant bien formaté. Vous pouvez choisir les types TypeScript, une prop size, des remplissages en currentColor, forwardRef, memo et le style d’export, puis copier le code ou télécharger le fichier."
+          ]
+        },
+        {
+          "h": "Comment convertir un SVG en composant React",
+          "p": ["L’opération ne prend que quelques secondes :"],
+          "list": [
+            "Collez le code SVG dans la zone de saisie ou déposez-y un ou plusieurs fichiers .svg.",
+            "Choisissez le format de sortie : React, React Native, Vue, Solid ou un simple extrait JSX.",
+            "Définissez le nom du composant et les options comme TypeScript, currentColor et la prop size.",
+            "Vérifiez l’aperçu en direct et la comparaison de taille, puis copiez le code ou téléchargez le fichier. Plusieurs fichiers sont regroupés dans un ZIP."
+          ]
+        },
+        {
+          "h": "Conversions appliquées automatiquement",
+          "p": [
+            "Les attributs avec trait d’union passent en camelCase (stroke-linecap → strokeLinecap), les attributs à espace de noms sont aplatis (xlink:href → xlinkHref) et les chaînes de style en ligne deviennent des objets JavaScript. Les attributs data-* et aria-* sont conservés tels quels, car React les accepte ainsi. Les éléments script et les gestionnaires d’événements en ligne sont supprimés : un fichier collé ne peut donc jamais glisser du code dans votre application.",
+            "Une optimisation légère réduit les espaces et peut arrondir les coordonnées à un nombre fixe de décimales. Pour la plupart des jeux d’icônes, cela retire 20 à 40 % du balisage sans dépendre du lourd SVGO."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Ce convertisseur SVG en JSX est-il gratuit ?",
+          "a": "Oui. SvgJsx est entièrement gratuit, sans compte et sans limite d’utilisation. C’est un site statique : il n’y a aucun coût de serveur à vous répercuter."
+        },
+        {
+          "q": "Mes fichiers SVG sont-ils envoyés quelque part ?",
+          "a": "Non. Les fichiers sont lus avec l’API FileReader du navigateur et convertis en JavaScript sur votre appareil. Rien n’est envoyé à un serveur, ce qui permet d’utiliser l’outil avec des logos et icônes confidentiels."
+        },
+        {
+          "q": "Quelle est la différence entre SVG et JSX ?",
+          "a": "SVG est un balisage XML, alors que JSX est une extension de syntaxe de JavaScript. JSX exige des noms d’attributs en camelCase, className au lieu de class, des objets de style au lieu de chaînes et des accolades pour les caractères spéciaux : c’est pourquoi un SVG brut échoue souvent à la compilation."
+        },
+        {
+          "q": "Est-ce compatible avec les exports Figma et Illustrator ?",
+          "a": "Oui. Les métadonnées propres à l’éditeur, les commentaires, les attributs sodipodi et inkscape ainsi que la déclaration XML sont supprimés par défaut, et les dégradés, masques et tracés de détourage continuent de fonctionner car les id référencés sont conservés."
+        },
+        {
+          "q": "Puis-je convertir plusieurs icônes SVG à la fois ?",
+          "a": "Oui. Déposez plusieurs fichiers .svg : chacun devient un composant portant le nom du fichier. Téléchargez-les tous dans un ZIP qui contient aussi un fichier index réexportant chaque icône."
+        }
+      ]
+    },
+    "svgToReact": {
+      "title": "Convertir un SVG en composant React (JSX) | SvgJsx",
+      "description": "Convertissez un SVG en composant React en ligne : props en camelCase, className, objets de style, prop size et {...props}. Gratuit et privé.",
+      "breadcrumb": "SVG en React",
+      "h1": "Convertir un SVG en composant React",
+      "intro": "Transformez n’importe quelle icône ou illustration SVG en composant React fonctionnel, avec des attributs prêts pour JSX, la transmission des props et des props optionnelles de taille et de couleur.",
+      "sections": [
+        {
+          "h": "Pourquoi ne pas coller le SVG directement dans React ?",
+          "p": [
+            "Coller un SVG brut dans un fichier .jsx produit généralement une avalanche d’avertissements comme « Invalid DOM property stroke-width » ou « Invalid DOM property class », voire une erreur de compilation si le fichier contient un attribut style ou une déclaration XML. Renommer chaque attribut à la main est lent et source d’erreurs pour de grands jeux d’icônes.",
+            "Ce convertisseur effectue le renommage pour vous et enveloppe le balisage dans un composant qui accepte des props. Comme {...props} est appliqué sur le <svg> racine, vous pouvez passer className, aria-label, onClick ou une largeur personnalisée depuis le parent sans retoucher l’icône."
+          ]
+        },
+        {
+          "h": "Réglages recommandés pour les icônes React",
+          "p": ["Pour un composant d’icône réutilisable, nous conseillons de :"],
+          "list": [
+            "Activer currentColor pour que l’icône hérite de la couleur du texte du parent et fonctionne en mode sombre.",
+            "Activer la prop size pour contrôler largeur et hauteur avec une seule valeur, par exemple size={20}.",
+            "Conserver le viewBox et supprimer width et height fixes pour que l’icône s’adapte au CSS.",
+            "N’utiliser forwardRef que si un parent a besoin de l’élément <svg>, par exemple pour des infobulles ou des animations."
+          ]
+        },
+        {
+          "h": "Composants en ligne ou fichiers image ?",
+          "p": [
+            "Les composants SVG en ligne peuvent être stylés en CSS, animés et changer de couleur au survol, sans jamais déclencher de requête réseau supplémentaire. Pour de grandes illustrations qui ne changent pas, un simple <img src=\"/file.svg\"> peut être plus économique, car le navigateur le met en cache séparément. Utilisez des composants pour les icônes et éléments d’interface, et des balises image pour les illustrations lourdes."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quelles versions de React sont prises en charge ?",
+          "a": "Le résultat est un composant fonction classique compatible avec React 16.8 et versions ultérieures, y compris React 18 et 19. forwardRef et memo sont optionnels et importés uniquement si vous les activez."
+        },
+        {
+          "q": "Faut-il importer React dans le fichier généré ?",
+          "a": "Non. Avec la transformation JSX moderne utilisée par Next.js, Vite et Create React App 4+, React n’a pas besoin d’être dans la portée. Le convertisseur n’importe que ce que le composant utilise réellement."
+        },
+        {
+          "q": "Comment changer la couleur de l’icône depuis le parent ?",
+          "a": "Activez l’option currentColor. Les remplissages et contours sont remplacés par currentColor, et l’icône prend la couleur CSS de son parent, par exemple via la classe Tailwind text-red-600."
+        },
+        {
+          "q": "Puis-je passer onClick ou aria-label à l’icône ?",
+          "a": "Oui. Le composant applique {...props} sur le <svg> racine : tout attribut SVG ou gestionnaire d’événement transmis est relayé et remplace les valeurs par défaut."
+        }
+      ]
+    },
+    "svgToTsx": {
+      "title": "Convertir un SVG en TSX — composants typés | SvgJsx",
+      "description": "Convertissez un SVG en TSX : composants React typés avec SVGProps<SVGSVGElement>, prop size, forwardRef et memo. Dans le navigateur, sans envoi.",
+      "breadcrumb": "SVG en TSX",
+      "h1": "SVG en TSX : composants d’icônes React typés",
+      "intro": "Générez des composants React en TypeScript à partir de SVG avec les bons types de props, pour que chaque icône accepte className, les attributs aria et les gestionnaires d’événements avec une autocomplétion complète.",
+      "sections": [
+        {
+          "h": "Comment fonctionnent les types générés",
+          "p": [
+            "Les props du composant sont typées SVGProps<SVGSVGElement>, le même type que React utilise pour l’élément <svg>. Vous bénéficiez ainsi de l’autocomplétion pour tous les attributs SVG et gestionnaires d’événements, et TypeScript rejette les props invalides dès la compilation.",
+            "Avec l’option size, les props deviennent SVGProps<SVGSVGElement> & { size?: number | string }, et width et height sont définis à partir de size. Avec forwardRef, la ref est typée Ref<SVGSVGElement>, afin que les parents puissent attacher des refs pour des mesures ou des bibliothèques d’animation."
+          ]
+        },
+        {
+          "h": "Liste de contrôle du résultat TSX",
+          "p": ["Avant de commiter une icône générée, vérifiez que :"],
+          "list": [
+            "le nom du composant est en PascalCase et correspond au nom du fichier (ArrowLeft.tsx) ;",
+            "SVGProps et Ref sont importés uniquement comme types et disparaissent donc du bundle JavaScript ;",
+            "le viewBox est présent : sans lui, l’icône ne peut pas être redimensionnée ;",
+            "des exports nommés sont utilisés si votre base de code interdit les exports par défaut."
+          ]
+        },
+        {
+          "h": "Compatible avec le mode strict",
+          "p": [
+            "Le code compile avec \"strict\": true et avec isolatedModules, exigés par Next.js, Vite et esbuild. Aucun type any n’est généré, et la valeur par défaut de size est écrite comme littéral dans le motif de déstructuration."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Faut-il utiliser SVGProps ou ComponentProps<\"svg\"> ?",
+          "a": "Les deux décrivent les mêmes attributs. SVGProps<SVGSVGElement> précise explicitement le type d’élément et c’est celui qu’emploient les définitions de types de React pour <svg> ; le convertisseur l’utilise donc."
+        },
+        {
+          "q": "forwardRef est-il encore utile avec React 19 ?",
+          "a": "React 19 permet aux composants fonction de recevoir ref comme une prop normale : forwardRef y devient facultatif. Il reste utile pour les bibliothèques qui doivent prendre en charge React 18, d’où une option désactivée par défaut."
+        },
+        {
+          "q": "Pourquoi la prop size est-elle typée number | string ?",
+          "a": "Les nombres deviennent des valeurs en pixels, tandis que les chaînes acceptent des unités CSS comme \"1em\" ou \"1.5rem\" pour que l’icône suive la taille du texte environnant."
+        },
+        {
+          "q": "Puis-je convertir tout un dossier d’icônes en TSX ?",
+          "a": "Oui. Déposez tous les fichiers d’un coup : chacun devient un fichier .tsx portant le nom du SVG, regroupé dans un ZIP avec un fichier barrel index.ts."
+        }
+      ]
+    },
+    "svgToReactNative": {
+      "title": "Convertir un SVG pour React Native | SvgJsx",
+      "description": "Convertissez un SVG en composants React Native pour react-native-svg : path, g et circle deviennent Path, G et Circle, typés SvgProps. Gratuit.",
+      "breadcrumb": "SVG en React Native",
+      "h1": "Convertir un SVG pour React Native (react-native-svg)",
+      "intro": "React Native ne sait pas afficher directement les balises <svg>. Ce convertisseur réécrit votre SVG avec des composants react-native-svg comme Svg, Path, G et Circle, avec les bons imports.",
+      "sections": [
+        {
+          "h": "Ce qui change pour React Native",
+          "p": [
+            "react-native-svg fournit un composant avec majuscule pour chaque élément SVG : <path> devient <Path>, <g> devient <G> et <linearGradient> devient <LinearGradient>. Le convertisseur associe chaque élément pris en charge, ajoute une seule ligne d’import contenant uniquement les composants utilisés et type les props avec SvgProps.",
+            "Les éléments sans équivalent natif, comme <title>, <desc>, <style> ou <metadata>, sont retirés avec un avertissement pour éviter un plantage à l’exécution. Les attributs class sont également supprimés, puisque React Native n’a pas de classes CSS."
+          ]
+        },
+        {
+          "h": "Installer react-native-svg",
+          "p": ["Pour utiliser le composant généré :"],
+          "list": [
+            "Installez la bibliothèque : npx expo install react-native-svg (Expo) ou npm install react-native-svg (React Native sans Expo).",
+            "Enregistrez le code converti dans un fichier .tsx ou .jsx de votre projet.",
+            "Affichez-le comme n’importe quel composant en lui passant width, height ou color.",
+            "Activez currentColor et passez une prop color pour teinter l’icône depuis le parent."
+          ]
+        },
+        {
+          "h": "Conseils pour les icônes mobiles",
+          "p": [
+            "Gardez des icônes simples : les filtres et masques coûtent cher à afficher sur les appareils Android d’entrée de gamme. Arrondissez les coordonnées à une ou deux décimales pour alléger le bundle JavaScript et préférez les remplissages aux contours pour les très petites icônes, car les traits fins peuvent paraître flous sur les écrans non Retina."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Est-ce compatible avec Expo ?",
+          "a": "Oui. react-native-svg fait partie du SDK Expo ; installez-le avec npx expo install react-native-svg et le composant généré fonctionne dans Expo Go et dans les development builds."
+        },
+        {
+          "q": "Pourquoi mon élément <style> a-t-il été supprimé ?",
+          "a": "react-native-svg ne prend pas en charge les feuilles de style CSS. Avant la conversion, transformez ces règles en attributs comme fill et stroke ou appliquez-les directement aux éléments."
+        },
+        {
+          "q": "Comment changer la couleur d’une icône dans React Native ?",
+          "a": "Activez currentColor, puis passez color=\"#ff0000\" au composant. react-native-svg résout currentColor à partir de la prop color de l’élément Svg."
+        },
+        {
+          "q": "react-native-svg-transformer est-il encore nécessaire ?",
+          "a": "Non, si vous convertissez vos icônes à l’avance. Le transformer permet d’importer directement des fichiers .svg, alors que cet outil produit des composants classiques qui ne demandent aucune configuration de Metro."
+        }
+      ]
+    },
+    "svgToVue": {
+      "title": "Convertir un SVG en composant Vue (SFC) | SvgJsx",
+      "description": "Convertissez un SVG en composant monofichier Vue 3 avec <script setup>, une prop size typée optionnelle et currentColor, dans votre navigateur.",
+      "breadcrumb": "SVG en Vue",
+      "h1": "Convertir un SVG en composant monofichier Vue",
+      "intro": "Enveloppez n’importe quel SVG dans un composant monofichier Vue 3 (.vue) avec un <template> propre, un <script setup lang=\"ts\"> optionnel et une prop size, prêt à être importé dans votre application.",
+      "sections": [
+        {
+          "h": "À quoi ressemble le résultat Vue",
+          "p": [
+            "Les templates Vue acceptent les attributs SVG tels quels : le convertisseur conserve donc les noms en kebab-case comme stroke-width et class. Il retire le superflu ajouté par l’éditeur, la déclaration XML et, en option, xmlns, puis place le balisage dans un bloc <template>.",
+            "Si l’option size est activée, un bloc <script setup> déclare une prop size avec une valeur par défaut et la lie à :width et :height. En TypeScript, la prop est déclarée avec defineProps<{ size?: number | string }>() et withDefaults."
+          ]
+        },
+        {
+          "h": "Transmission automatique des attributs",
+          "p": [
+            "Comme le <svg> est l’unique élément racine, Vue lui transmet automatiquement les attributs qui ne sont pas déclarés comme props. class, style, aria-label et les écouteurs comme @click arrivent donc sur le <svg> sans code supplémentaire. L’option de transmission des props est par conséquent inutile pour Vue."
+          ]
+        },
+        {
+          "h": "Utiliser le composant",
+          "p": ["Utilisation typique dans un projet Vue 3 ou Nuxt :"],
+          "list": [
+            "Enregistrez le résultat sous IconName.vue dans votre dossier de composants.",
+            "Importez-le : import IconName from \"./IconName.vue\".",
+            "Affichez <IconName :size=\"20\" class=\"text-emerald-600\" /> dans n’importe quel template.",
+            "Avec currentColor activé, l’icône suit la propriété CSS color."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Le résultat fonctionne-t-il avec Vue 2 ?",
+          "a": "Le template fonctionne aussi avec Vue 2.7, mais <script setup> avec defineProps nécessite Vue 2.7 ou Vue 3. Pour les projets Vue 2 plus anciens, désactivez la prop size afin d’obtenir un composant composé uniquement d’un template."
+        },
+        {
+          "q": "Puis-je l’utiliser avec Nuxt ?",
+          "a": "Oui. Placez le fichier dans le répertoire components et Nuxt l’importera automatiquement par son nom, par exemple <IconArrow /> pour components/IconArrow.vue."
+        },
+        {
+          "q": "Pourquoi Vue signale-t-il le <style> dans mon SVG ?",
+          "a": "Vue retire les balises <style> des templates car elles ont des effets de bord. Déplacez le CSS dans le bloc <style scoped> du composant ou convertissez-le en attributs avant la conversion."
+        },
+        {
+          "q": "vite-svg-loader est-il une meilleure option ?",
+          "a": "Un loader est pratique si vous importez de nombreux SVG au moment du build. Convertir en fichiers .vue vous donne un contrôle total sur le balisage et les props, sans aucune configuration de build."
+        }
+      ]
+    },
+    "svgToSolid": {
+      "title": "Convertir un SVG en composant SolidJS | SvgJsx",
+      "description": "Convertissez un SVG en composants SolidJS : props typées JSX.SvgSVGAttributes, splitProps pour la prop size et transmission des props. Gratuit.",
+      "breadcrumb": "SVG en Solid",
+      "h1": "Convertir un SVG en composant SolidJS",
+      "intro": "Créez des composants d’icônes SolidJS à partir de code SVG. Le résultat respecte les conventions d’attributs de Solid, type les props avec JSX.SvgSVGAttributes et reste réactif.",
+      "sections": [
+        {
+          "h": "En quoi Solid diffère de React",
+          "p": [
+            "Le JSX de Solid applique les attributs directement au DOM : les attributs SVG comme stroke-width et class restent donc exactement tels qu’ils figurent dans le fichier. Inutile de les renommer en camelCase ou en className comme avec React.",
+            "Dans Solid, les props sont des getters réactifs, et les déstructurer casse la réactivité. Lorsque vous activez la prop size, le convertisseur utilise splitProps pour séparer size des autres props et transmet le reste au <svg>, de sorte que toutes les valeurs restent réactives."
+          ]
+        },
+        {
+          "h": "Types TypeScript générés",
+          "p": [
+            "Les props sont typées JSX.SvgSVGAttributes<SVGSVGElement>, importé de solid-js, qui couvre tous les attributs SVG et gestionnaires d’événements. Avec l’option size, le type est étendu avec { size?: number | string }."
+          ]
+        },
+        {
+          "h": "Utiliser le composant dans SolidStart",
+          "p": ["Pour commencer :"],
+          "list": [
+            "Enregistrez le résultat sous IconName.tsx dans votre dossier src/components.",
+            "Importez-le et affichez <IconName size={18} class=\"icon\" />.",
+            "Utilisez currentColor pour hériter de la couleur du texte environnant.",
+            "Les refs passent par la prop ref habituelle ; forwardRef n’est pas nécessaire avec Solid."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Pourquoi les attributs ne passent-ils pas en camelCase pour Solid ?",
+          "a": "Solid définit les attributs directement sur les éléments du DOM, où les attributs SVG sont sensibles à la casse et écrits avec des traits d’union. Conserver les noms d’origine est l’option la plus fiable."
+        },
+        {
+          "q": "forwardRef et memo s’appliquent-ils à Solid ?",
+          "a": "Non. Les composants Solid ne s’exécutent qu’une fois et reçoivent les refs comme des props ordinaires : ces options propres à React sont donc ignorées lorsque Solid est sélectionné."
+        },
+        {
+          "q": "Le composant reste-t-il réactif ?",
+          "a": "Oui. Le convertisseur ne déstructure jamais les props : il utilise splitProps pour la prop size et la lit via local.size, ce qui propage les mises à jour sans recréer l’élément."
+        },
+        {
+          "q": "Puis-je utiliser le résultat avec Astro ?",
+          "a": "Oui. Astro prend en charge les composants Solid via l’intégration @astrojs/solid-js, et l’icône est rendue côté serveur sans envoyer de JavaScript, sauf si vous l’hydratez."
+        }
+      ]
+    },
+    "svgCurrentcolor": {
+      "title": "SVG en currentColor — icônes personnalisables | SvgJsx",
+      "description": "Remplacez les couleurs fill et stroke codées en dur par currentColor pour que vos icônes suivent la couleur CSS, le survol et le mode sombre.",
+      "breadcrumb": "SVG currentColor",
+      "h1": "Faire utiliser currentColor à vos icônes SVG",
+      "intro": "Remplacez les couleurs fill et stroke codées en dur par currentColor pour que vos icônes héritent de la couleur du texte de leur parent, changent au survol et s’adaptent automatiquement au mode sombre.",
+      "sections": [
+        {
+          "h": "Ce que fait currentColor",
+          "p": [
+            "currentColor est un mot-clé CSS qui correspond à la valeur calculée de la propriété color de l’élément. Lorsqu’un SVG utilise fill=\"currentColor\", l’icône est peinte avec la couleur appliquée à son parent, qu’elle provienne d’une classe Tailwind, de l’état de survol d’un lien ou d’une media query de mode sombre.",
+            "Les outils de design exportent les icônes avec des valeurs hexadécimales fixes comme fill=\"#111827\". L’icône est alors figée dans une seule couleur et vous oblige à gérer des fichiers différents pour chaque thème. Avec currentColor, un seul fichier convient partout."
+          ]
+        },
+        {
+          "h": "Ce que modifie le convertisseur",
+          "p": ["Lorsque l’option currentColor est activée :"],
+          "list": [
+            "les attributs fill et stroke ayant une valeur de couleur deviennent currentColor ;",
+            "fill et stroke à l’intérieur des attributs style en ligne sont aussi remplacés ;",
+            "none, transparent, inherit et les références url(#dégradé) sont conservés, si bien que les contours et dégradés fonctionnent toujours ;",
+            "les autres couleurs, comme stop-color dans les dégradés, restent inchangées."
+          ]
+        },
+        {
+          "h": "Quand éviter currentColor",
+          "p": [
+            "Les illustrations multicolores, les logos de marque et les drapeaux reposent sur plusieurs couleurs précises. Les remplacer toutes par une seule aplatit le visuel. Pour ces fichiers, conservez les couleurs d’origine ou utilisez des propriétés personnalisées CSS pour les quelques couleurs à adapter au thème."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Pourquoi mon icône est-elle noire après conversion ?",
+          "a": "currentColor hérite de la propriété CSS color. Si le parent n’a aucune couleur définie, les navigateurs utilisent le noir par défaut. Définissez color sur l’icône ou sur un parent, par exemple class=\"text-blue-600\"."
+        },
+        {
+          "q": "currentColor fonctionne-t-il avec les contours ?",
+          "a": "Oui. fill comme stroke acceptent currentColor ; c’est pourquoi les jeux d’icônes au trait comme Lucide ou Heroicons utilisent stroke=\"currentColor\"."
+        },
+        {
+          "q": "Puis-je utiliser currentColor dans une balise <img> ?",
+          "a": "Non. Un SVG chargé via <img> ou background-image en CSS est isolé du CSS de la page, et currentColor y vaut noir. Le SVG doit être intégré en ligne, ce que permet justement un composant."
+        },
+        {
+          "q": "Les dégradés fonctionneront-ils encore ?",
+          "a": "Oui. Les remplissages qui référencent un dégradé avec url(#id) ne sont pas modifiés, et les id référencés sont conservés même lorsque la suppression des id est activée."
+        }
+      ]
+    },
+    "guideSvgIconsInReact": {
+      "title": "Utiliser des icônes SVG dans React (guide 2026) | SvgJsx",
+      "description": "Comparez les façons d’utiliser des icônes SVG dans React : composants en ligne, balises img, SVGR, sprites et bibliothèques. Avantages et limites.",
+      "breadcrumb": "Icônes SVG dans React",
+      "h1": "Comment utiliser des icônes SVG dans React",
+      "intro": "Il existe cinq façons courantes d’intégrer des icônes SVG dans une application React. Ce guide les compare en termes de performances, de style et d’accessibilité, et indique quand choisir chacune.",
+      "sections": [
+        {
+          "h": "1. Composants SVG en ligne",
+          "p": [
+            "Convertir chaque icône en composant (l’approche que ce site automatise) offre un contrôle total : les icônes héritent de la couleur via currentColor, acceptent des props comme size et className et peuvent être animées en CSS ou avec une bibliothèque d’animation. Les bundlers éliminent les composants inutilisés (tree shaking), vous n’envoyez donc que les icônes importées.",
+            "En contrepartie, le balisage fait partie de votre bundle JavaScript. Pour quelques dizaines de petites icônes, c’est négligeable ; pour des centaines d’illustrations complexes, ça ne l’est plus."
+          ]
+        },
+        {
+          "h": "2. Balises img et arrière-plans CSS",
+          "p": [
+            "<img src=\"/logo.svg\" alt=\"Entreprise\"> est l’option la plus simple, et le navigateur peut mettre le fichier en cache. En revanche, le SVG est isolé de votre CSS : impossible de changer sa couleur au survol ou en mode sombre. Réservez-la aux logos et illustrations qui ne changent jamais."
+          ]
+        },
+        {
+          "h": "3. SVGR et loaders au moment du build",
+          "p": [
+            "SVGR (via @svgr/webpack ou vite-plugin-svgr) convertit les imports .svg en composants au moment du build. C’est pratique pour de gros dossiers d’icônes, mais cela ajoute de la configuration et peut se comporter différemment selon les bundlers ou avec Turbopack. Une conversion unique avec cet outil produit le même type de composant, versionné comme du code source."
+          ]
+        },
+        {
+          "h": "4. Sprites SVG et 5. bibliothèques d’icônes",
+          "p": [
+            "Un sprite regroupe de nombreux éléments <symbol> dans un fichier et les référence avec <use href=\"#icone\">. Il allège le HTML mais complique le rendu côté serveur. Les bibliothèques comme Lucide, Heroicons ou Phosphor fournissent des composants prêts à l’emploi, idéaux si leur style correspond à votre design.",
+            "Quelle que soit la méthode choisie, respectez ces règles d’accessibilité :"
+          ],
+          "list": [
+            "Les icônes décoratives placées à côté d’un texte reçoivent aria-hidden=\"true\".",
+            "Les icônes autonomes, comme un bouton composé uniquement d’une icône, ont besoin d’un nom accessible via aria-label sur le bouton ou d’un <title> dans le SVG.",
+            "Conservez un viewBox et dimensionnez les icônes en em ou rem pour qu’elles suivent la taille de police de l’utilisateur.",
+            "Garantissez un rapport de contraste d’au moins 3:1 pour les icônes porteuses de sens (WCAG 1.4.11)."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Quelle est la meilleure façon d’utiliser des icônes SVG dans React ?",
+          "a": "Pour les icônes d’interface, les composants en ligne avec currentColor et une prop size sont les plus souples. Utilisez <img> pour les illustrations statiques et une bibliothèque d’icônes si son style convient à votre design."
+        },
+        {
+          "q": "Les icônes SVG en ligne nuisent-elles aux performances ?",
+          "a": "Rarement. Une icône typique de 24×24 pèse 300 à 600 octets après optimisation. Les problèmes n’apparaissent qu’avec des centaines d’icônes complexes affichées en même temps ; un sprite ou <img> est alors préférable."
+        },
+        {
+          "q": "Vaut-il mieux utiliser SVGR ou convertir les icônes soi-même ?",
+          "a": "SVGR convient aux grands jeux d’icônes qui changent souvent, avec une chaîne de build stable. Les composants préconvertis ne demandent aucune configuration et se comportent de la même façon avec tous les bundlers."
+        },
+        {
+          "q": "Comment rendre les icônes SVG accessibles ?",
+          "a": "Masquez les icônes décoratives avec aria-hidden=\"true\" et donnez aux icônes porteuses de sens un nom accessible avec aria-label ou un <title>. Ne comptez jamais sur une icône seule pour transmettre une information essentielle."
+        },
+        {
+          "q": "Comment dimensionner des icônes SVG avec Tailwind ?",
+          "a": "Supprimez width et height fixes, gardez le viewBox et appliquez des classes comme size-5 ou h-4 w-4. Vous pouvez aussi activer la prop size et passer un nombre."
+        }
+      ]
+    },
+    "about": {
+      "title": "À propos de SvgJsx — convertisseur SVG gratuit",
+      "description": "SvgJsx est un outil gratuit et respectueux de la vie privée qui convertit le SVG en composants React, TypeScript, React Native, Vue et Solid.",
+      "breadcrumb": "À propos",
+      "h1": "À propos de SvgJsx",
+      "intro": "SvgJsx est un petit outil de développement ciblé : il convertit du code SVG en composants de framework rapidement, en toute confidentialité et sans inscription.",
+      "sections": [
+        {
+          "h": "Pourquoi nous l’avons créé",
+          "p": [
+            "Tout projet front-end finit par avoir besoin d’icônes sur mesure. Les designers exportent des fichiers SVG, et les développeurs passent du temps à renommer des attributs, à retirer les métadonnées de l’éditeur et à envelopper le balisage dans des composants. Les convertisseurs en ligne existants envoient souvent vos fichiers sur un serveur, affichent des publicités entre les étapes ou ne gèrent que React.",
+            "SvgJsx fonctionne entièrement dans votre navigateur, prend en charge les frameworks réellement utilisés par les équipes et produit du code conforme aux conventions actuelles, que vous pouvez commiter sans nettoyage manuel."
+          ]
+        },
+        {
+          "h": "Comment ça marche",
+          "p": [
+            "Le convertisseur intègre un petit parseur XML écrit en TypeScript. Il construit un arbre à partir de votre SVG, applique les étapes de nettoyage choisies — suppression des métadonnées, arrondi des nombres ou remplacement des couleurs par currentColor — puis imprime l’arbre en JSX, en template Vue ou en composants react-native-svg. Ce code est couvert par des tests automatisés pour chaque option et pour les entrées mal formées.",
+            "Le site est généré statiquement et servi depuis un CDN. Il n’y a ni backend, ni base de données, ni système de comptes."
+          ]
+        },
+        {
+          "h": "Principes",
+          "p": ["Le projet suit quelques principes simples :"],
+          "list": [
+            "La confidentialité d’abord : votre SVG ne quitte jamais votre appareil.",
+            "Un résultat lisible : du code formaté avec uniquement les imports nécessaires.",
+            "Sûr par défaut : les scripts et gestionnaires d’événements en ligne sont supprimés.",
+            "Disponible en sept langues : anglais, chinois, espagnol, allemand, français, japonais et portugais."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "Qui maintient SvgJsx ?",
+          "a": "SvgJsx est un projet indépendant de l’équipe derrière ContrastCheck et le Calculateur de ratio d’aspect, une petite famille d’outils gratuits fonctionnant dans le navigateur pour les designers et les développeurs."
+        },
+        {
+          "q": "Peut-on proposer des fonctionnalités ?",
+          "a": "Oui. Les suggestions de nouveaux formats de sortie ou d’options sont les bienvenues. La priorité actuelle est un résultat fiable pour React, React Native, Vue et Solid."
+        },
+        {
+          "q": "Comment SvgJsx gagne-t-il de l’argent ?",
+          "a": "Il n’en gagne pas pour l’instant. Le site est statique, l’hébergement coûte donc très peu, et il n’existe aucune offre payante."
+        },
+        {
+          "q": "Puis-je utiliser le code généré à des fins commerciales ?",
+          "a": "Oui. Le code produit par le convertisseur vous appartient et peut servir dans n’importe quel projet. Vérifiez toutefois la licence de l’illustration SVG d’origine que vous convertissez."
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — SvgJsx",
+      "description": "SvgJsx convertit les fichiers SVG entièrement dans votre navigateur. Aucun envoi, aucun cookie, et des statistiques anonymes sans cookies.",
+      "breadcrumb": "Confidentialité",
+      "h1": "Politique de confidentialité",
+      "intro": "En bref : vos fichiers SVG et le code généré ne quittent jamais votre appareil. Nous n’utilisons pas de cookies et nos statistiques sont anonymes.",
+      "sections": [
+        {
+          "h": "Vos fichiers restent dans votre navigateur",
+          "p": [
+            "Tout le traitement a lieu dans votre navigateur. Lorsque vous collez du code ou déposez un fichier, celui-ci est lu avec l’API FileReader et converti en JavaScript sur votre appareil. Le SVG, l’aperçu et le code généré ne sont jamais transmis ni à nous ni à des tiers. Les ZIP des téléchargements par lots sont eux aussi créés localement.",
+            "Comme rien n’est stocké sur un serveur, nous n’avons rien à supprimer, à vendre ou à perdre lors d’une fuite de données. Fermer l’onglet efface votre saisie de la mémoire."
+          ]
+        },
+        {
+          "h": "Statistiques",
+          "p": [
+            "Nous utilisons Vercel Web Analytics pour compter les pages vues et quelques événements anonymes, par exemple lorsqu’une personne copie le résultat, clique sur un préréglage ou change de langue. Vercel Analytics fonctionne sans cookies : il n’en dépose aucun, n’utilise pas le stockage local pour le suivi et ne crée pas de profils entre sites. Les visiteurs sont comptés grâce à une empreinte qui change chaque jour et ne permet pas de vous identifier.",
+            "Les événements ne contiennent jamais le contenu de votre SVG ni le code généré."
+          ]
+        },
+        {
+          "h": "Ce que nous ne faisons pas",
+          "p": ["Pour faire simple :"],
+          "list": [
+            "Pas de cookies ni de bandeau cookies, puisqu’il n’y a rien à accepter.",
+            "Pas de traceurs publicitaires ni de polices tierces chargées à l’exécution.",
+            "Pas de comptes, d’adresses e-mail ni de collecte de données personnelles.",
+            "Aucun stockage côté serveur de ce que vous convertissez."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "SvgJsx envoie-t-il mes fichiers SVG ?",
+          "a": "Non. Les fichiers sont lus localement avec FileReader et convertis dans votre navigateur. Vous pouvez même vous déconnecter d’internet une fois la page chargée : le convertisseur continue de fonctionner."
+        },
+        {
+          "q": "Le site utilise-t-il des cookies ?",
+          "a": "Non. Ni le convertisseur ni Vercel Web Analytics ne déposent de cookies, aucun bandeau de consentement n’est donc nécessaire."
+        },
+        {
+          "q": "Quelles données les statistiques collectent-elles ?",
+          "a": "Des pages vues anonymes et agrégées avec le pays, le navigateur et le site référent, ainsi que le nombre d’événements comme copy_output. Aucune donnée personnelle ni aucun contenu SVG n’est collecté."
+        },
+        {
+          "q": "Cette politique va-t-elle changer ?",
+          "a": "Si nous modifions un jour la manière dont les données sont traitées, cette page sera mise à jour en premier. La règle essentielle restera la même : vos fichiers sont traités sur votre appareil."
+        }
+      ]
+    }
+  }
+}
