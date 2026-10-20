@@ -22,7 +22,7 @@ npm start       # serve the production build
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | `https://svg-to-jsx.vercel.app` | Absolute base URL for canonical, hreflang, sitemap, robots, OG and JSON-LD URLs |
+| `NEXT_PUBLIC_SITE_URL` | `https://svgtojsx.top` | Absolute base URL for canonical, hreflang, sitemap, robots, OG and JSON-LD URLs |
 
 ## Pages
 

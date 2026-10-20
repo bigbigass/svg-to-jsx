@@ -22,14 +22,14 @@ Slug/repo: `svg-to-jsx` · Target: Vercel `svg-to-jsx.vercel.app` (owner deploys
 - `<html lang>` set per locale. Language switcher in header that keeps the current path.
 - Every page: `alternates.languages` in `generateMetadata` producing `<link rel="alternate" hreflang="xx">` for all 7 locales + `x-default` (→ English), and a self-referencing canonical.
 - `app/sitemap.ts`: every page × every locale, each entry with `alternates.languages`. `app/robots.ts` pointing to sitemap.
-- Base URL from `NEXT_PUBLIC_SITE_URL` (fallback `https://svg-to-jsx.vercel.app`).
+- Base URL from `NEXT_PUBLIC_SITE_URL` (fallback `https://svgtojsx.top`).
 
 ## SEO
 - Unique title (<60 chars) and meta description (<155 chars) per page per locale; OG + Twitter tags; generated OG image via `app/opengraph-image.tsx` (static).
 - JSON-LD: `WebApplication` (price 0) on tool pages, `FAQPage` on pages with FAQ, `BreadcrumbList` on landing pages.
 - Each page: one H1, 300–700 words of genuinely useful explanatory content below the tool, 4–6 FAQs, internal links to related landing pages.
 - Core Web Vitals: no layout shift, tool interactive client component, content server-rendered. Lighthouse SEO/Accessibility ≥ 95.
-- Footer: About, Privacy (states all processing is in-browser; Vercel Analytics is cookieless), link to sister sites (ContrastCheck https://wcag-contrastcheck.vercel.app, Aspect Ratio Calculator https://aspectratiocalc.top).
+- Footer: About, Privacy (states all processing is in-browser; Vercel Analytics is cookieless), link to sister sites (ContrastCheck https://contrastcheck.top, Aspect Ratio Calculator https://aspectratiocalc.top).
 
 ## Analytics
 - `@vercel/analytics` `<Analytics />` in root layout. Custom events via `track()`: `copy_output`, `preset_click`, `locale_switch`.
